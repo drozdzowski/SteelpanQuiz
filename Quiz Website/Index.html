@@ -1,0 +1,301 @@
+--- START OF FILE Index.html ---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Bertram "Bertie" Marshall Steelpan Quiz and Spelling Bee</title>
+<link href="https://fonts.googleapis.com/css2?family=Grand+Hotel&display=swap" rel="stylesheet">
+
+<style>
+:root {
+--rim-color: #222;
+--cream-tip: #fffdd0;
+--neon-blue: #00e5ff;
+--neon-pink: #ff007b;
+--highlander-blue: #002366;
+--highlander-orange: #f37021;
+--hammered-grain: url("data:image/svg+xml,%3Csvg viewBox='0 0 250 250' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.3'/%3E%3C/svg%3E");
+/* 1. CUSTOM STICK CURSOR */
+--stick-cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'><line x1='5' y1='27' x2='25' y2='7' stroke='%2300e5ff' stroke-width='4' stroke-linecap='round'/><circle cx='25' cy='7' r='5' fill='%23fffdd0'/></svg>") 25 7, auto;
+}
+
+body {
+margin: 0;
+background: radial-gradient(circle at center, #1a1a1a, #000);
+display: flex;
+flex-direction: column;
+align-items: center;
+min-height: 100vh;
+font-family: 'Arial Black', Gadget, sans-serif;
+color: white;
+overflow-x: hidden;
+}
+
+.site-header {
+    background-color: var(--highlander-blue);
+    width: 100%;
+    padding: 30px 0;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+    margin-bottom: 40px;
+}
+
+.main-title {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.name-part {
+    font-family: 'Grand Hotel', cursive;
+    color: var(--highlander-orange);
+    font-size: 4.5rem;
+    font-weight: normal;
+    line-height: 0.9;
+    text-shadow: 2px 2px 0px rgba(0,0,0,0.2);
+}
+
+.event-part {
+    font-family: 'Arial', sans-serif;
+    color: var(--highlander-orange);
+    font-size: 2.2rem;
+    font-weight: bold;
+    font-style: italic;
+    text-transform: lowercase;
+    margin-top: -5px;
+}
+
+.main-stage {
+position: relative;
+display: flex;
+flex-direction: column;
+align-items: center;
+width: 100%;
+max-width: 1000px;
+padding-bottom: 50px;
+}
+
+.pan-base {
+position: relative;
+width: 496px;
+height: 496px;
+border-radius: 50%;
+border: 15px solid var(--rim-color);
+box-shadow: 0 40px 80px rgba(0,0,0,0.8), inset 0 0 60px rgba(0,0,0,0.7);
+display: flex;
+justify-content: center;
+align-items: center;
+overflow: hidden;
+background: var(--hammered-grain), radial-gradient(circle at 50% 50%, rgba(0,0,0,0.4) 0%, transparent 80%), conic-gradient(from 180deg at 50% 50%, #7f8c8d 0deg, #bdc3c7 40deg, #fff 80deg, #95a5a6 120deg, #2c3e50 160deg, #fff 200deg, #bdc3c7 240deg, #7f8c8d 280deg, #fff 320deg, #7f8c8d 360deg);
+}
+
+.note {
+position: absolute;
+display: flex;
+justify-content: center;
+align-items: center;
+text-align: center;
+text-decoration: none;
+color: #222;
+font-weight: 900;
+text-transform: uppercase;
+cursor: var(--stick-cursor);
+transition: transform 0.1s ease;
+background-image: var(--hammered-grain), radial-gradient(circle at 35% 35%, #fff 0%, #bdc3c7 40%, #95a5a6 100%);
+box-shadow: inset 6px 6px 12px rgba(0,0,0,0.4), inset -2px -2px 8px rgba(255,255,255,0.7), 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+/* 2. INDIVIDUAL NOTE SINKING (CSS ONLY) */
+.note:active {
+    transform: scale(0.9) rotate(var(--r)) !important;
+    box-shadow: inset 15px 15px 30px rgba(0,0,0,0.8) !important;
+    filter: brightness(0.8);
+}
+
+.note-center {
+width: 150px;
+height: 150px;
+border-radius: 50%;
+z-index: 10;
+font-size: 14px!important;
+--r: 0deg;
+}
+
+.note-peripheral {
+width: 85px;
+height: 105px;
+border-radius: 50% 50% 50% 50% / 25% 25% 75% 75%;
+}
+
+.note span { pointer-events: none; font-size: 10px; padding: 5px; transform: rotate(calc(var(--r)*-1)); }
+
+.sticks-area {
+display: flex;
+justify-content: space-between;
+width: 480px;
+margin-top: -45px;
+z-index: 20;
+}
+
+.stick {
+position: relative;
+width: 20px;
+height: 208px;
+border-radius: 10px;
+display: flex;
+justify-content: center;
+align-items: center;
+text-decoration: none;
+transition: .3s cubic-bezier(.175,.885,.32,1.275);
+}
+
+.stick::before {
+content: ''; position: absolute; top: -5px; width: 30px; height: 50px;
+background: linear-gradient(135deg, #ce1126 0%, #ce1126 35%, #ffffff 35%, #ffffff 42%, #000000 42%, #000000 58%, #ffffff 58%, #ffffff 65%, #ce1126 65%, #ce1126 100%);
+border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+}
+
+.stick-left { background: var(--neon-blue); box-shadow: 0 0 15px var(--neon-blue); transform: rotate(25deg); }
+.stick-right { background: var(--neon-pink); box-shadow: 0 0 15px var(--neon-pink); transform: rotate(-25deg); }
+
+/* 3. STICK RESONANCE ANIMATION */
+@keyframes resonateBlue {
+    0% { box-shadow: 0 0 15px var(--neon-blue); transform: rotate(25deg) scale(1); }
+    50% { box-shadow: 0 0 60px var(--neon-blue), 0 0 100px var(--neon-blue); transform: rotate(25deg) scale(1.1); }
+    100% { box-shadow: 0 0 15px var(--neon-blue); transform: rotate(25deg) scale(1); }
+}
+@keyframes resonatePink {
+    0% { box-shadow: 0 0 15px var(--neon-pink); transform: rotate(-25deg) scale(1); }
+    50% { box-shadow: 0 0 60px var(--neon-pink), 0 0 100px var(--neon-pink); transform: rotate(-25deg) scale(1.1); }
+    100% { box-shadow: 0 0 15px var(--neon-pink); transform: rotate(-25deg) scale(1); }
+}
+
+.stick-left.active-pulse { animation: resonateBlue 0.4s ease-out; }
+.stick-right.active-pulse { animation: resonatePink 0.4s ease-out; }
+
+.stick-text { writing-mode: vertical-rl; font-weight: 900; color: white; font-size: 14px; }
+.stick-left .stick-text { transform: rotate(180deg); }
+
+@media (max-width:700px) {
+.pan-base { transform: scale(.65); }
+.sticks-area { transform: scale(.7); margin-top: -80px; }
+}
+</style>
+</head>
+
+<body>
+
+<header class="site-header">
+    <h1 class="main-title">
+        <span class="name-part">The Bertram "Bertie" Marshall</span>
+        <span class="event-part">Steelpan Quiz and Spelling Bee</span>
+    </h1>
+</header>
+
+<div class="main-stage">
+<div class="pan-base" id="pan">
+<a href="quiz-categories.html" class="note note-center" data-freq="261.63">
+<span>QUIZ<br>CATEGORIES</span>
+</a>
+<div id="peripheral-container"></div>
+</div>
+
+<div class="sticks-area">
+<a href="register.html" class="stick stick-left">
+<span class="stick-text">REGISTER</span>
+</a>
+<a href="donate.html" class="stick stick-right">
+<span class="stick-text">DONATE</span>
+</a>
+</div>
+</div>
+
+<script>
+// Logic for individual links
+const items = [
+    { name: "About the Quiz", file: "about-the-quiz.html" },
+    { name: "Sources", file: "sources.html" },
+    { name: "Games", file: "games.html" },
+    { name: "Play Yuhself", file: "play-yuhself.html" },
+    { name: "Sponsors", file: "sponsors.html" },
+    { name: "Previous Quizzes", file: "previous-quizzes.html" },
+    { name: "Practice", file: "practice.html" },
+    { name: "Podcast", file: "podcast.html" },
+    { name: "Blog", file: "blog.html" },
+    { name: "News", file: "news.html" },
+    { name: "Fun FAQs", file: "fun-faqs.html" },
+    { name: "Contact", file: "contact.html" }
+];
+
+const frequencies=[277,311,349,392,440,493,523,587,659,698,783,880];
+const container=document.getElementById('peripheral-container');
+const radius=180.5; 
+
+items.forEach((item, i) => {
+    const angle = (i * 30);
+    const rad = angle * (Math.PI/180);
+    const x = Math.cos(rad - Math.PI/2) * radius;
+    const y = Math.sin(rad - Math.PI/2) * radius;
+
+    const note = document.createElement('a');
+    note.href = item.file; 
+    note.className = 'note note-peripheral';
+    note.style.setProperty('--r', `${angle}deg`);
+    note.style.left = `calc(50% + ${x}px - 42.5px)`;
+    note.style.top = `calc(50% + ${y}px - 52.5px)`;
+    note.style.transform = `rotate(${angle}deg)`;
+    note.innerHTML = `<span>${item.name}</span>`;
+    note.dataset.freq = frequencies[i];
+    container.appendChild(note);
+});
+
+// Sound Engine
+const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+function playPing(freq) {
+    if (audioCtx.state === 'suspended') audioCtx.resume();
+    const osc = audioCtx.createOscillator();
+    const gain = audioCtx.createGain();
+    osc.type = 'triangle';
+    osc.frequency.setValueAtTime(freq, audioCtx.currentTime);
+    gain.gain.setValueAtTime(0, audioCtx.currentTime);
+    gain.gain.linearRampToValueAtTime(0.3, audioCtx.currentTime + 0.01);
+    gain.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.5);
+    osc.connect(gain);
+    gain.connect(audioCtx.destination);
+    osc.start();
+    osc.stop(audioCtx.currentTime + 0.5);
+}
+
+// INTERCEPT CLICKS TO PREVENT AUDIO CUTOFF
+document.addEventListener('click', function(e) {
+    const link = e.target.closest('a');
+    if (!link) return;
+
+    // 1. Determine Frequency
+    const freq = link.dataset.freq ? parseFloat(link.dataset.freq) : 180;
+    
+    // 2. Play Sound
+    playPing(freq);
+
+    // 3. Stick animation (if it's a stick)
+    if (link.classList.contains('stick')) {
+        link.classList.add('active-pulse');
+        setTimeout(() => link.classList.remove('active-pulse'), 400);
+    }
+
+    // 4. Handle Navigation with a slight delay so tone doesn't cut off
+    const href = link.getAttribute('href');
+    if (href && !href.startsWith('#')) {
+        e.preventDefault(); // Stop immediate page switch
+        setTimeout(() => {
+            window.location.href = href;
+        }, 300); // 300ms is enough for the "Ping" to be heard before the page unloads
+    }
+});
+</script>
+
+</body>
+</html>

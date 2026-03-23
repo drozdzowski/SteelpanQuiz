@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice Cards</title>
+    <link href="https://fonts.googleapis.com/css2?family=Grand+Hotel&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --highlander-blue: #002366;
+            --highlander-orange: #f37021;
+        }
+
+        body { margin: 0; background: #f4f4f4; font-family: Arial, sans-serif; display: flex; flex-direction: column; align-items: center; min-height: 100vh; }
+        .site-header { background-color: var(--highlander-blue); width: 100%; padding: 20px 0; text-align: center; margin-bottom: 50px; }
+        .name-part { font-family: 'Grand Hotel', cursive; color: var(--highlander-orange); font-size: 3rem; }
+
+        .container { max-width: 1100px; display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; padding: 20px; }
+
+        /* FLASHCARD STYLE */
+        .flashcard {
+            width: 320px;
+            height: 420px;
+            perspective: 1000px;
+            cursor: pointer;
+            display: none; /* Hidden by default, shown via JS */
+        }
+
+        .flashcard-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            border-radius: 15px;
+        }
+
+        .flashcard.flipped .flashcard-inner { transform: rotateY(180deg); }
+
+        .card-front, .card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 25px 30px;
+            box-sizing: border-box;
+            border-radius: 15px;
+            border: 3px solid var(--highlander-blue);
+            text-align: center;
+        }
+
+        .card-front { background-color: white; color: var(--highlander-blue); }
+        .card-back { background-color: #fff9f5; color: #333; transform: rotateY(180deg); }
+
+        .card-title { font-weight: bold; font-size: 1rem; margin-bottom: 6px; color: var(--highlander-orange); }
+        .card-text { font-size: 0.8rem; line-height: 1.4; margin: 3px 0; }
+        .card-img { width: 100px; height: 100px; object-fit: cover; border-radius: 50%; margin-bottom: 8px; }
+
+        /* Bullet list styling for card backs */
+        .card-back ul {
+            list-style: disc;
+            text-align: left;
+            padding-left: 18px;
+            margin: 4px 0;
+            width: 100%;
+        }
+        .card-back ul li {
+            font-size: 0.76rem;
+            line-height: 1.4;
+            margin-bottom: 4px;
+            color: #333;
+        }
+        .card-back ul li b {
+            color: var(--highlander-blue);
+        }
+
+        .footer-nav { margin: 40px 0 50px 0; }
+        .back-btn { padding: 12px 25px; background: var(--highlander-blue); color: white; text-decoration: none; border-radius: 5px; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+<header class="site-header">
+    <h1 class="main-title"><span class="name-part">Practice Flashcards</span></h1>
+</header>
+
+<div class="container" id="cardContainer">
+
+    <!-- ============================================================
+         HOW TO ADD MORE CARDS:
+         1. Copy a card block below.
+         2. Give it a new unique id (e.g. innovations-3, highlanders-3).
+         3. Keep class="flashcard [category]" — the category must match
+            what practice.html links to (e.g. class="flashcard highlanders").
+         4. Fill in the front and back content.
+    ============================================================ -->
+
+
+    <!-- ── INNOVATIONS CARDS ── -->
+
+    <div id="innovations-1" class="flashcard innovations" onclick="this.classList.toggle('flipped')">
+        <div class="flashcard-inner">
+            <div class="card-front">
+                <div class="card-title">Bertie Marshall</div>
+                <img src="images/bertie-marshall.png" class="card-img" alt="">
+                <p class="card-text">1936-2012</p>
+		<p class="card-text">Hometown: Laventille, Port of Spain</p>
+            	<p class="card-text">Profession: Welder</p>
+                <p class="card-text">Second Captain of Hylanders Steel Orchestra from 1959</p>
+                <small>Click to Reveal</small>
+            </div>
+            <div class="card-back">
+                <div class="card-title">Key Innovations &amp; Inventions</div>
+                <ul>
+                    <li><b>Harmonic Tuning (1956):</b> Tuned notes by octaves and overtones, giving the pan its distinctive bright tonal quality.</li>
+                    <li>First to electronically amplify the steelpan.</li>
+                    <li>Helped develop the Double Tenor pan with Vincent Pompey.</li>
+                    <li>Brought steelpan into churches to accompany hymns.</li>
+                    <li>Awarded Chaconia Medal (Gold) 1972.</li>
+ 		    <li>Awarded the Order of the Republic of T&amp;T 2008.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div id="innovations-2" class="flashcard innovations" onclick="this.classList.toggle('flipped')">
+        <div class="flashcard-inner">
+            <div class="card-front">
+                <div class="card-title">Dr. Elliot "Ellie" Mannette</div>
+                <img src="images/ellie-mannette.png" class="card-img" alt="">
+                <p class="card-text">1927–2018</p>
+                <p class="card-text">Hometown: Woodbrook, Port of Spain</p>
+                <p class="card-text">Known as the "Father of the Modern Steelpan"</p>
+                <small>Click to Reveal</small>
+            </div>
+            <div class="card-back">
+                <div class="card-title">Key Contributions</div>
+                <ul>
+                    <li>First to use a 55-gallon oil drum for steelpan construction.</li>
+                    <li>Standardized note layout for the tenor (soprano) pan.</li>
+                    <li>Moved to the USA in 1967; settled at West Virginia University.</li>
+                    <li>Founded Mannette Musical Instruments, training dozens of master tuners.</li>
+                    <li>National Heritage Fellowship Award (NEA) 1999.</li>
+                    <li>Percussive Arts Society Hall of Fame 2003.</li>
+		    <li>Awarded the Chaconia Medal (Silver) in 2000.</li>
+		    <li>Awarded the Order of the Republic of Trinidad and Tobago in 2008.</li>
+		    <li>Recognized by the Smithsonian Institution of Washington, DC.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ── HIGHLANDERS CARDS ── -->
+
+    <div id="highlanders-1" class="flashcard highlanders" onclick="this.classList.toggle('flipped')">
+        <div class="flashcard-inner">
+            <div class="card-front">
+                <div class="card-title">Kim Loy Wong</div>
+                <img src="images/kim-loy-wong.jpg" alt="" class="card-img">
+                <p class="card-text">19?? – 2008?</p>
+                <p class="card-text">Born and raised in Laventille, Port of Spain</p>
+                <small>Click to Reveal</small>
+            </div>
+            <div class="card-back">
+                <div class="card-title">Kim Loy Wong</div>
+                <ul>
+                    <li>First Captain of Hylanders/Highlanders Steel Orchestra in the 1950s.</li>
+                    <li>Profession: ???</li>
+                    <li>Responsible for: ???</li>
+                    <li>Migrated to Canada in 1959.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div id="highlanders-2" class="flashcard highlanders" onclick="this.classList.toggle('flipped')">
+        <div class="flashcard-inner">
+            <div class="card-front">
+                <div class="card-title">Henry Carrington</div>
+                <img src="images/henry-carrington.jpg" alt="" class="card-img">
+                <p class="card-text">19?? – 20??</p>
+                <small>Click to Reveal</small>
+            </div>
+            <div class="card-back">
+                <div class="card-title">Henry Carrington</div>
+                <ul>
+                    <li>Tuner and arranger for Highlanders in the 1960s?</li>
+                    <li>Etc.</li>
+                    <li>Etc.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</div><!-- end .container -->
+
+<div class="footer-nav">
+    <a href="practice.html" class="back-btn">← Back to Categories</a>
+</div>
+
+<script>
+    function filterCards() {
+        const hash = window.location.hash.substring(1);
+        const cards = document.querySelectorAll('.flashcard');
+
+        let found = false;
+        cards.forEach(card => {
+            if (hash && card.classList.contains(hash)) {
+                card.style.display = 'block';
+                found = true;
+            } else {
+                card.style.display = 'none';
+            }
+        });
+
+        if (!found) {
+            document.getElementById('cardContainer').innerHTML = "<p style='color:black'>Please select a category from the previous page.</p>";
+        }
+    }
+
+    window.onload = filterCards;
+    window.onhashchange = filterCards;
+</script>
+
+</body>
+</html>

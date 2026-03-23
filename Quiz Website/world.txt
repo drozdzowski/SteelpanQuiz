@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning: Category Name</title>
+    <link href="https://fonts.googleapis.com/css2?family=Grand+Hotel&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --highlander-blue: #002366;
+            --highlander-orange: #f37021;
+        }
+        body { margin: 0; background: #f9f9f9; color: #333; font-family: 'Segoe UI', Arial, sans-serif; line-height: 1.6; }
+        
+        .site-header { background-color: var(--highlander-blue); width: 100%; padding: 20px 0; text-align: center; color: white; }
+        .name-part { font-family: 'Grand Hotel', cursive; color: var(--highlander-orange); font-size: 2.5rem; }
+
+        .content-container { max-width: 800px; margin: 40px auto; padding: 40px; background: white; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
+        
+        h1 { color: var(--highlander-blue); border-bottom: 3px solid var(--highlander-orange); padding-bottom: 10px; }
+        .hero-img { width: 100%; height: auto; border-radius: 10px; margin: 20px 0; border: 1px solid #ddd; }
+        
+        .external-links { background: #f0f4f8; padding: 20px; border-radius: 8px; margin: 30px 0; }
+        .external-links a { color: var(--highlander-blue); font-weight: bold; text-decoration: none; display: block; margin-bottom: 10px; }
+        .external-links a:hover { color: var(--highlander-orange); }
+
+        .cta-box { text-align: center; margin-top: 50px; padding-top: 30px; border-top: 1px solid #eee; }
+        
+        /* The link to the Practice Flashcard */
+        .practice-btn { 
+            display: inline-block; 
+            padding: 15px 40px; 
+            background: var(--highlander-orange); 
+            color: white; 
+            text-decoration: none; 
+            border-radius: 30px; 
+            font-weight: bold; 
+            font-size: 1.2rem;
+            transition: 0.3s;
+        }
+        .practice-btn:hover { background: var(--highlander-blue); transform: translateY(-3px); }
+        
+        .back-link { display: block; margin-bottom: 20px; color: var(--highlander-blue); text-decoration: none; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+<header class="site-header">
+    <div class="name-part">Bertram "Bertie" Marshall Memorial</div>
+</header>
+
+<div class="content-container">
+    <a href="quiz-categories.html" class="back-link">← Back to Categories</a>
+    
+    <h1>Steelpan History</h1> <!-- Change for each page -->
+
+    <p>Insert your history text here. Talk about the evolution from bamboo to steel.</p>
+
+    <!-- Insert the specific image for this category -->
+    <img src="tenor.png" class="hero-img" alt="Tenor Pan">
+
+    <p>Additional details about Bertie Marshall's role in this specific area.</p>
+
+    <div class="external-links">
+        <h3>Further Reading</h3>
+        <a href="https://example.com" target="_blank">→ Watch Documentary Video</a>
+        <a href="https://example.com" target="_blank">→ Read Historical Archive</a>
+    </div>
+
+    <div class="cta-box">
+        <p>Think you've mastered this topic?</p>
+        <!-- CHANGE THE #ID AT THE END TO MATCH THE FLASHCARD ID -->
+        <a href="practicecards.html#world" class="practice-btn">Test Your Knowledge →</a>
+    </div>
+</div>
+
+</body>
+</html>

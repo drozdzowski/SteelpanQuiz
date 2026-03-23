@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Categories - The Bertram Marshall Quiz</title>
+    <link href="https://fonts.googleapis.com/css2?family=Grand+Hotel&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --highlander-blue: #002366;
+            --highlander-orange: #f37021;
+            --overlay: rgba(0, 35, 102, 0.85);
+        }
+        
+        body { 
+            margin: 0; 
+            background: #000; 
+            color: #ffffff; 
+            font-family: 'Arial', sans-serif; 
+            display: flex; 
+            flex-direction: column; 
+            align-items: center; 
+        }
+
+        .site-header { 
+            background-color: var(--highlander-blue); 
+            width: 100%; 
+            padding: 20px 0; 
+            text-align: center; 
+            box-shadow: 0 5px 15px rgba(0,0,0,0.5); 
+        }
+
+        .name-part { 
+            font-family: 'Grand Hotel', cursive; 
+            color: var(--highlander-orange); 
+            font-size: 3rem; 
+        }
+
+        .categories-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr); 
+            gap: 12px;
+            width: 98%;
+            max-width: 1400px;
+            margin: 30px auto;
+        }
+
+        .category-card {
+            position: relative;
+            height: 280px; 
+            border-radius: 12px;
+            overflow: hidden;
+            border: 2px solid #333;
+            text-decoration: none;
+            display: block;
+            transition: all 0.3s ease;
+            /* Fallback color if image is missing */
+            background-color: var(--highlander-blue);
+        }
+
+        .category-card:nth-child(even) { background-color: #1a1a1a; }
+
+        .category-card:hover {
+            transform: translateY(-8px);
+            border-color: var(--highlander-orange);
+            box-shadow: 0 10px 20px rgba(243, 112, 33, 0.3);
+        }
+
+        .category-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(transparent 20%, var(--overlay) 100%);
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .category-label {
+            color: white;
+            font-size: 0.85rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.9);
+            line-height: 1.2;
+        }
+
+        .footer-area { margin: 30px 0 50px 0; }
+
+        .back-btn { 
+            padding: 12px 30px; 
+            background: var(--highlander-orange); 
+            color: white; 
+            text-decoration: none; 
+            border-radius: 5px; 
+            font-weight: bold; 
+        }
+
+        @media (max-width: 1200px) { .categories-grid { grid-template-columns: repeat(3, 1fr); } }
+        @media (max-width: 768px) { .categories-grid { grid-template-columns: repeat(2, 1fr); } }
+    </style>
+</head>
+<body>
+
+<header class="site-header">
+    <h1 class="main-title">
+        <span class="name-part">What Will You Learn Today?</span>
+    </h1>
+</header>
+<div class="categories-grid">
+    <a href="history.html" class="category-card">
+        <img src="tenor.png">
+        <div class="overlay"><span class="category-label">Steelpan History</span></div>
+    </a>
+
+    <a href="thrust.html" class="category-card">
+        <img src="guitar.png">
+        <div class="overlay"><span class="category-label">The World Steelpan Thrust</span></div>
+    </a>
+
+    <a href="highlanders-info.html" class="category-card">
+        <img src="bass.png">
+        <div class="overlay"><span class="category-label">Highlanders Steel Orchestra</span></div>
+    </a>
+
+    <a href="music.html" class="category-card">
+        <img src="quad.png">
+        <div class="overlay"><span class="category-label">Music for the Pan</span></div>
+    </a>
+
+    <a href="panyards.html" class="category-card">
+        <img src="seconds.png">
+        <div class="overlay"><span class="category-label">Panyards and Bands</span></div>
+    </a>
+
+    <a href="tuning.html" class="category-card">
+        <img src="quad.png">
+        <div class="overlay"><span class="category-label">Pan Tuning</span></div>
+    </a>
+
+    <a href="innovations-info.html" class="category-card">
+        <img src="seconds.png">
+        <div class="overlay"><span class="category-label">Innovations/Innovators</span></div>
+    </a>
+
+    <a href="competitions.html" class="category-card">
+        <img src="tenor.png">
+        <div class="overlay"><span class="category-label">Steelpan Competitions</span></div>
+    </a>
+
+    <a href="women.html" class="category-card">
+        <img src="bass.png">
+        <div class="overlay"><span class="category-label">Women in Pan</span></div>
+    </a>
+
+    <a href="world.html" class="category-card">
+        <img src="guitar.png">
+        <div class="overlay"><span class="category-label">Pan Around the World</span></div>
+    </a>
+</div>
+
+<div class="footer-area">
+    <a href="Index.html" class="back-btn">← Back to the Pan</a>
+</div>
+
+</body>
+</html>
