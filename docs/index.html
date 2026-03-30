@@ -1,4 +1,4 @@
---- START OF FILE Index.html ---
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -6,7 +6,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>The Bertram "Bertie" Marshall Steelpan Quiz and Spelling Bee</title>
-<link href="https://fonts.googleapis.com/css2?family=Grand+Hotel&display=swap" rel="stylesheet">
+
+<!-- Google Fonts: Inter for all headings -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
 
 <style>
 :root {
@@ -20,6 +22,7 @@
 /* 1. CUSTOM STICK CURSOR */
 --stick-cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'><line x1='5' y1='27' x2='25' y2='7' stroke='%2300e5ff' stroke-width='4' stroke-linecap='round'/><circle cx='25' cy='7' r='5' fill='%23fffdd0'/></svg>") 25 7, auto;
 }
+
 
 body {
 margin: 0;
@@ -50,12 +53,17 @@ overflow-x: hidden;
 }
 
 .name-part {
-    font-family: 'Grand Hotel', cursive;
+    font-family: 'Inter', Arial, sans-serif;
     color: var(--highlander-orange);
-    font-size: 4.5rem;
-    font-weight: normal;
+    font-size: 2.7rem;
+    font-weight: 700;
     line-height: 0.9;
     text-shadow: 2px 2px 0px rgba(0,0,0,0.2);
+    padding-bottom: 1.2rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Inter', Arial, sans-serif;
 }
 
 .event-part {
@@ -63,8 +71,7 @@ overflow-x: hidden;
     color: var(--highlander-orange);
     font-size: 2.2rem;
     font-weight: bold;
-    font-style: italic;
-    text-transform: lowercase;
+    text-transform: uppercase;
     margin-top: -5px;
 }
 
