@@ -1,0 +1,38 @@
+:root {
+    --highlander-blue: #002366;
+    --highlander-orange: #f37021;
+    --page-bg: #ffffff;
+    --panel-bg: #f9f9f9;
+    --content-bg: #ffffff;
+    --text: #222222;
+    --muted-text: #333333;
+    --border: #dddddd;
+    --soft-panel: #f0f4f8;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    min-width: 0;
+}
+
+img,
+video,
+iframe {
+    max-width: 100%;
+}
+
+a {
+    overflow-wrap: anywhere;
+}

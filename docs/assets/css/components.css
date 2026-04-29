@@ -1,0 +1,45 @@
+.back-btn,
+.practice-btn {
+    display: inline-block;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.back-btn {
+    color: #ffffff;
+}
+
+.back-btn:hover,
+.practice-btn:hover {
+    color: #ffffff;
+}
+
+.hero-img {
+    max-width: 100%;
+    height: auto;
+}
+
+.external-links {
+    background: var(--soft-panel);
+    overflow-wrap: anywhere;
+}
+
+.external-links a {
+    color: var(--highlander-blue);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.external-links a:hover {
+    color: var(--highlander-orange);
+}
+
+.cta-box {
+    text-align: center;
+}
+
+@media (max-width: 650px) {
+    .sticks-area {
+        width: min(420px, calc(100dvw - 96px)) !important;
+    }
+}
