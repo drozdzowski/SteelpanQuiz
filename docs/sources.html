@@ -3,19 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Title Goes Here - The Bertram Marshall Quiz</title>
+    <title>Sources - The Bertram Marshall Quiz</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
     <style>
         :root {
             --highlander-blue: #002366;
             --highlander-orange: #f37021;
         }
-        body { margin: 0; background: #ffffff; color: #222; font-family: Arial, sans-serif; line-height: 1.6; display: flex; flex-direction: column; align-items: center; }
+        * { box-sizing: border-box; }
+        body { margin: 0; background: #ffffff; color: #222; font-family: Arial, sans-serif; line-height: 1.6; display: flex; flex-direction: column; align-items: center; overflow-x: hidden; }
         .site-header { background-color: var(--highlander-blue); width: 100%; padding: 30px 0; text-align: center; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
-        .name-part { font-family: 'Inter', Arial, sans-serif; color: var(--highlander-orange); font-size: 3.5rem; }
+        .name-part { font-family: 'Inter', Arial, sans-serif; color: var(--highlander-orange); font-size: clamp(2.2rem, 9vw, 3.5rem); }
         h1, h2, h3, h4, h5, h6 { font-family: 'Inter', Arial, sans-serif; }
-        .container { max-width: 800px; margin: 50px auto; padding: 40px; background: #f9f9f9; border: 1px solid #dddddd; border-radius: 15px; width: 90%; }
+        .container { max-width: 800px; margin: 50px auto; padding: clamp(22px, 6vw, 40px); background: #f9f9f9; border: 1px solid #dddddd; border-radius: 15px; width: min(90%, 800px); }
         h2 { color: var(--highlander-blue); border-bottom: 2px solid var(--highlander-orange); padding-bottom: 10px; }
+        ul { padding-left: 1.25rem; }
+        li { margin-bottom: 12px; }
+        a { color: var(--highlander-blue); overflow-wrap: anywhere; }
+        a:hover { color: var(--highlander-orange); }
         .back-btn { display: inline-block; margin-top: 30px; padding: 12px 25px; background: var(--highlander-blue); color: white; text-decoration: none; border-radius: 5px; font-weight: bold; transition: 0.2s; }
         .back-btn:hover { background: var(--highlander-orange); transform: scale(1.05); }
     </style>
@@ -29,42 +34,36 @@
 </header>
 
 <div class="container">
-    <h2>YOUTUBE Links</h2>
-    <p>
-        YOUR CONTENT GOES HERE.
-    </p>
-<h2>INSTAGRAM Links</h2>
-    <p>
-        YOUR CONTENT GOES HERE.
-    </p>
-<h2>ARTICLES</h2>
-    <p>
-        "An Interim History of the Pan in the 21st Century and Pan Down Memory Lane Events - 2005"  by Dr. Jeannine Remy D.M.A. and Jeremy G. de Barry P.Dip. E.E.Eng http://www.seetobago.org/trinidad/pan/archive/r&d/p21c+pdml/p21c+pdml_history2005.htm</p>
+    <h2>Articles</h2>
+    <ul>
+        <li>
+            <cite>An Interim History of the Pan in the 21st Century and Pan Down Memory Lane Events - 2005</cite>
+            by Dr. Jeannine Remy D.M.A. and Jeremy G. de Barry P.Dip. E.E.Eng.
+            <a href="http://www.seetobago.org/trinidad/pan/archive/r&amp;d/p21c+pdml/p21c+pdml_history2005.htm">Read the article</a>
+        </li>
+    </ul>
 
-    </p>
-   <h2>BOOKS</h2>
-    <p>
-         "The Illustrated Story of Pan" by Kim Johnson</p>
-<p>"Our National Instrument - The Evolution of TT's Steelpan through 17 Works of Art" by Nasser Khan and Sheldon Waithe
-<p>"Music from Behind the Bridge: Steelband Aesthetics and Politics in Trinidad and Tobago" by Shannon Dudley
-<p>"The Trinidad & Tobago Steel Pan: History and Evolution" by Felix I. R. Blake
-<p>"Panorama Finals - 1963 to Present" by Ian Franklin
-<p> "Mettle and Metal – The Birth of Steel Pan Music and the History of Trinidad All Stars Steel Orchestra" by A. Bukka Rennie
-    </p> 
-<h2>VIDEOS</h2>
-    <p>
-        YOUR CONTENT GOES HERE.
-    </p>
-<h2>WEBSITES</h2>
-    <p>
-        <a href="https://panonthenet.com"</a></p>
-https://nationaltrust.tt/panyards-of-trinidad/</p>
-https://whensteeltalks.ning.com/</p>
+    <h2>Books</h2>
+    <ul>
+        <li><cite>The Illustrated Story of Pan</cite> by Kim Johnson</li>
+        <li><cite>Our National Instrument - The Evolution of TT's Steelpan through 17 Works of Art</cite> by Nasser Khan and Sheldon Waithe</li>
+        <li><cite>Music from Behind the Bridge: Steelband Aesthetics and Politics in Trinidad and Tobago</cite> by Shannon Dudley</li>
+        <li><cite>The Trinidad &amp; Tobago Steel Pan: History and Evolution</cite> by Felix I. R. Blake</li>
+        <li><cite>Panorama Finals - 1963 to Present</cite> by Ian Franklin</li>
+        <li><cite>Mettle and Metal - The Birth of Steel Pan Music and the History of Trinidad All Stars Steel Orchestra</cite> by A. Bukka Rennie</li>
+    </ul>
 
+    <h2>Websites</h2>
+    <ul>
+        <li><a href="https://panonthenet.com">Pan On The Net</a></li>
+        <li><a href="https://nationaltrust.tt/panyards-of-trinidad/">National Trust of Trinidad and Tobago: Panyards of Trinidad</a></li>
+        <li><a href="https://whensteeltalks.ning.com/">When Steel Talks</a></li>
+    </ul>
 
+    <h2>Videos and Social Media</h2>
+    <p>More YouTube and Instagram links will be added here as the quiz resource list grows.</p>
 
-
-<a href="index.html" class="back-btn">← Back to the Pan</a>
+    <a href="index.html" class="back-btn">Back to the Pan</a>
 </div>
 
 </body>
