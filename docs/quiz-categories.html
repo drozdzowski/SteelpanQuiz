@@ -14,7 +14,10 @@
         
         body { 
             margin: 0; 
-            background: #000; 
+            background:
+                radial-gradient(circle at 50% 0%, rgba(243,112,33,0.18), transparent 34%),
+                radial-gradient(circle at 12% 28%, rgba(0,35,102,0.9), transparent 38%),
+                linear-gradient(180deg, #071224 0%, #03060c 46%, #000103 100%);
             color: #ffffff; 
             font-family: 'Arial', sans-serif; 
             display: flex; 
@@ -48,7 +51,7 @@
 
         .category-card {
             position: relative;
-            height: 280px; 
+            height: 220px; 
             border-radius: 12px;
             overflow: hidden;
             border: 2px solid #333;
@@ -72,6 +75,7 @@
             height: 100%;
             object-fit: cover;
             display: block;
+            filter: saturate(1.18) contrast(1.05);
         }
 
         .overlay {
@@ -107,7 +111,7 @@
         }
 
         @media (max-width: 1200px) { .categories-grid { grid-template-columns: repeat(3, 1fr); } }
-        @media (max-width: 768px) { .categories-grid { grid-template-columns: repeat(2, 1fr); } }
+        @media (max-width: 768px) { .categories-grid { grid-template-columns: repeat(2, 1fr); } .category-card { height: 170px; } }
     </style>
     <link rel="stylesheet" href="assets/css/base.css">
     <link rel="stylesheet" href="assets/css/layout.css">
@@ -122,47 +126,47 @@
 </header>
 <div class="categories-grid">
     <a href="history.html" class="category-card">
-        <img src="images/tenor.png">
+        <img src="images/category-thumbs/steelpan-history.jpg" alt="Steelpan History">
         <div class="overlay"><span class="category-label">Steelpan History</span></div>
     </a>
 
     <a href="thrust.html" class="category-card">
-        <img src="images/guitar.png">
+        <img src="images/category-thumbs/world-steelpan-thrust.jpg" alt="The World Steelpan Thrust">
         <div class="overlay"><span class="category-label">The World Steelpan Thrust</span></div>
     </a>
 
     <a href="highlanders-info.html" class="category-card">
-        <img src="images/bass.png">
+        <img src="images/category-thumbs/highlanders-steel-orchestra.jpg" alt="Highlanders Steel Orchestra">
         <div class="overlay"><span class="category-label">Highlanders Steel Orchestra</span></div>
     </a>
 
     <a href="music.html" class="category-card">
-        <img src="images/quad.png">
+        <img src="images/category-thumbs/music-for-the-pan.jpg" alt="Music for the Pan">
         <div class="overlay"><span class="category-label">Music for the Pan</span></div>
     </a>
 
     <a href="panyards.html" class="category-card">
-        <img src="images/seconds.png">
+        <img src="images/category-thumbs/panyards-and-bands.png" alt="Panyards and Bands">
         <div class="overlay"><span class="category-label">Panyards and Bands</span></div>
     </a>
 
     <a href="tuning.html" class="category-card">
-        <img src="images/quad.png">
+        <img src="images/category-thumbs/pan-tuning.png" alt="Pan Tuning">
         <div class="overlay"><span class="category-label">Pan Tuning</span></div>
     </a>
 
     <a href="innovations-info.html" class="category-card">
-        <img src="images/seconds.png">
-        <div class="overlay"><span class="category-label">Innovations/Innovators</span></div>
+        <img src="images/category-thumbs/innovations-innovators.jpg" alt="Innovations/Innovators">
+        <div class="overlay"><span class="category-label">Innovations/<br>Innovators</span></div>
     </a>
 
     <a href="competitions.html" class="category-card">
-        <img src="images/tenor.png">
+        <img src="images/category-thumbs/steelpan-competitions.jpg" alt="Steelpan Competitions">
         <div class="overlay"><span class="category-label">Steelpan Competitions</span></div>
     </a>
 
     <a href="WomenInPan.html" class="category-card">
-        <img src="images/bass.png">
+        <img src="images/category-thumbs/women-in-pan.png" alt="Women in Pan">
         <div class="overlay"><span class="category-label">Women in Pan</span></div>
     </a>
 
