@@ -1,0 +1,27 @@
+{
+  "name": "steelpanquiz",
+  "version": "1.0.0",
+  "description": "An education competition in Trinidad, focusing on the history and culture of steelpan.",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/drozdzowski/SteelpanQuiz.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/drozdzowski/SteelpanQuiz/issues"
+  },
+  "homepage": "https://github.com/drozdzowski/SteelpanQuiz#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.59.1"
+  }
+}

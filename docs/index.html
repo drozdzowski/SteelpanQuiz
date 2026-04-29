@@ -3,15 +3,16 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<p>
-        <div><b> Bertram "Bertie" Marshall O.R.T.T. National Steelpan Quiz and Spelling Bee Competition</b></p>
-Launched in 2024 by the World Steelpan Thrust of Trinidad and Tobago and the Highlanders Steel Orchestra in honour of Highlanders Steel Orchestra's legendary leader and Master Pan Tuner</p>
-</div>
+<title>Bertram "Bertie" Marshall O.R.T.T. National Steelpan Quiz and Spelling Bee Competition</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;600;700&family=Open+Sans:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
 
 <style>
+* {
+box-sizing: border-box;
+}
+
 :root {
 --rim-color: #222;
 --cream-tip: #fffdd0;
@@ -24,6 +25,12 @@ Launched in 2024 by the World Steelpan Thrust of Trinidad and Tobago and the Hig
 --stick-cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'><line x1='5' y1='27' x2='25' y2='7' stroke='%2300e5ff' stroke-width='4' stroke-linecap='round'/><circle cx='25' cy='7' r='5' fill='%23fffdd0'/></svg>") 25 7, auto;
 }
 
+html {
+width: 100%;
+max-width: 100%;
+overflow-x: hidden;
+}
+
 body {
 margin: 0;
 background: radial-gradient(circle at center, #1a1a1a, #000);
@@ -34,15 +41,43 @@ min-height: 100vh;
 font-family: 'Arial Black', Gadget, sans-serif;
 color: white;
 overflow-x: hidden;
+width: 100%;
+max-width: 100%;
+padding: 18px 12px 28px;
 }
 
+.intro {
+width: min(100%, 760px);
+margin: 0 auto 20px;
+font-family: 'Open Sans', Arial, sans-serif;
+font-size: clamp(13px, 2.8vw, 17px);
+line-height: 1.4;
+text-align: center;
+}
+
+.intro strong {
+display: block;
+font-family: 'Lexend', Arial, sans-serif;
+font-size: clamp(16px, 4vw, 24px);
+line-height: 1.18;
+margin-bottom: 8px;
+}
+
+.main-stage {
+display: flex;
+flex-direction: column;
+align-items: center;
+width: min(100%, 560px);
+}
 
 .pan-base {
+box-sizing: content-box;
 position: relative;
-width: 496px;
-height: 496px;
+width: min(496px, calc(100vw - 56px));
+width: min(496px, calc(100dvw - 56px));
+aspect-ratio: 1;
 border-radius: 50%;
-border: 15px solid var(--rim-color);
+border: clamp(8px, 3vw, 15px) solid var(--rim-color);
 box-shadow: 0 40px 80px rgba(0,0,0,0.8), inset 0 0 60px rgba(0,0,0,0.7);
 display: flex;
 justify-content: center;
@@ -75,27 +110,36 @@ box-shadow: inset 6px 6px 12px rgba(0,0,0,0.4), inset -2px -2px 8px rgba(255,255
 }
 
 .note-center {
-width: 150px;
-height: 150px;
+width: 30.25%;
+height: 30.25%;
 border-radius: 50%;
 z-index: 10;
-font-size: 14px!important;
 --r: 0deg;
 }
 
 .note-peripheral {
-width: 85px;
-height: 105px;
+width: 17.14%;
+height: 21.17%;
 border-radius: 50% 50% 50% 50% / 25% 25% 75% 75%;
 }
 
-.note span { pointer-events: none; font-size: 10px; padding: 5px; transform: rotate(calc(var(--r)*-1)); }
+.note span {
+pointer-events: none;
+font-size: clamp(7px, 2vw, 10px);
+padding: 5px;
+transform: rotate(calc(var(--r)*-1));
+}
+
+.note-center span {
+font-size: clamp(10px, 2.8vw, 14px);
+}
 
 .sticks-area {
 display: flex;
 justify-content: space-between;
-width: 480px;
-margin-top: -45px;
+width: min(480px, calc(100vw - 56px));
+width: min(480px, calc(100dvw - 56px));
+margin-top: clamp(-45px, -8vw, -24px);
 z-index: 20;
 }
 
@@ -137,15 +181,15 @@ border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.4);
 
 .stick-text { writing-mode: vertical-rl; font-weight: 900; color: white; font-size: 14px; }
 .stick-left .stick-text { transform: rotate(180deg); }
-
-@media (max-width:700px) {
-.pan-base { transform: scale(.65); }
-.sticks-area { transform: scale(.7); margin-top: -80px; }
-}
 </style>
 </head>
 
 <body>
+
+<div class="intro">
+<strong>Bertram "Bertie" Marshall O.R.T.T. National Steelpan Quiz and Spelling Bee Competition</strong>
+Launched in 2024 by the World Steelpan Thrust of Trinidad and Tobago and the Highlanders Steel Orchestra in honour of Highlanders Steel Orchestra's legendary leader and Master Pan Tuner
+</div>
 
 <div class="main-stage">
 <div class="pan-base" id="pan">
@@ -183,26 +227,44 @@ const items = [
 ];
 
 const frequencies=[277,311,349,392,440,493,523,587,659,698,783,880];
+const pan=document.getElementById('pan');
 const container=document.getElementById('peripheral-container');
-const radius=180.5; 
+const NOTE_W_RATIO=85/496;
+const NOTE_H_RATIO=105/496;
+const RADIUS_RATIO=180.5/496;
 
 items.forEach((item, i) => {
-    const angle = (i * 30);
-    const rad = angle * (Math.PI/180);
-    const x = Math.cos(rad - Math.PI/2) * radius;
-    const y = Math.sin(rad - Math.PI/2) * radius;
-
     const note = document.createElement('a');
     note.href = item.file; 
     note.className = 'note note-peripheral';
-    note.style.setProperty('--r', `${angle}deg`);
-    note.style.left = `calc(50% + ${x}px - 42.5px)`;
-    note.style.top = `calc(50% + ${y}px - 52.5px)`;
-    note.style.transform = `rotate(${angle}deg)`;
-    note.innerHTML = `<span>${item.name}</span>`;
+    note.dataset.index = i;
     note.dataset.freq = frequencies[i];
+    note.innerHTML = `<span>${item.name}</span>`;
     container.appendChild(note);
 });
+
+function positionNotes() {
+    const panSize = pan.clientWidth;
+    const radius = panSize * RADIUS_RATIO;
+    const noteW = panSize * NOTE_W_RATIO;
+    const noteH = panSize * NOTE_H_RATIO;
+
+    container.querySelectorAll('.note-peripheral').forEach((note) => {
+        const i = Number(note.dataset.index);
+        const angle = (i * 30);
+        const rad = angle * (Math.PI/180);
+        const x = Math.cos(rad - Math.PI/2) * radius;
+        const y = Math.sin(rad - Math.PI/2) * radius;
+
+        note.style.left = `calc(50% + ${x}px - ${noteW / 2}px)`;
+        note.style.top = `calc(50% + ${y}px - ${noteH / 2}px)`;
+        note.style.transform = `rotate(${angle}deg)`;
+        note.style.setProperty('--r', `${angle}deg`);
+    });
+}
+
+positionNotes();
+window.addEventListener('resize', positionNotes);
 
 // Sound Engine
 const audioCtx = new (window.AudioContext || window.webkitAudioContext)();

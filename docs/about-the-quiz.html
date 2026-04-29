@@ -57,6 +57,32 @@
             color: #333333; /* Paragraph text is dark grey */
         }
 
+        .legacy-img {
+            width: 220px;
+            max-width: 42%;
+            height: auto;
+            float: left;
+            margin: 6px 24px 14px 0;
+            border-radius: 10px;
+            border: 1px solid #dddddd;
+        }
+
+        .legacy-section::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        @media (max-width: 600px) {
+            .legacy-img {
+                float: none;
+                display: block;
+                max-width: 100%;
+                width: 100%;
+                margin: 0 0 18px 0;
+            }
+        }
+
         .back-btn {
             display: inline-block;
             margin-top: 30px;
@@ -97,13 +123,11 @@ Participants are tested on their knowledge of steelpan pioneers, pan constructio
 </p>
 </p>
 <h2>The Legacy of Bertram Marshall </h2> 
-    <p>
-           <img src="images/bertie-marshall-ortt.jpg" class="hero-img" alt="Bertie Marshall">
-
-Bertram "Bertie" Marshall, O.R.T.T. (1936–2012) was a master instrument-maker and a musical genius from Laventille, Trinidad and Tobago. He was Captain of Highlanders Steel Orchestra from 1959 to 1972.</p>
-
-        He is credited with revolutionizing the steelpan by introducing harmonic tuning, amplification, and creating the "Bertphone" — a foot-pedal-controlled system used to manage the tone and amplification of steelpans. It allowed players to sustain notes in similar fashion to an organ, and included a damper pedal for controlling sound timbre.
-    </p>
+    <div class="legacy-section">
+        <img src="images/bertie-marshall-ortt.jpg" class="legacy-img" alt="Bertie Marshall">
+        <p>Bertram "Bertie" Marshall, O.R.T.T. (1936–2012) was a master instrument-maker and a musical genius from Laventille, Trinidad and Tobago. He was Captain of Highlanders Steel Orchestra from 1959 to 1972.</p>
+        <p>He is credited with revolutionizing the steelpan by introducing harmonic tuning, amplification, and creating the "Bertphone" — a foot-pedal-controlled system used to manage the tone and amplification of steelpans. It allowed players to sustain notes in similar fashion to an organ, and included a damper pedal for controlling sound timbre.</p>
+    </div>
 
     <a href="index.html" class="back-btn">← Back to the Pan</a>
 </div>
