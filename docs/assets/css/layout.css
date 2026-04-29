@@ -2,7 +2,9 @@
     background-color: var(--highlander-blue);
     width: 100%;
     max-width: 100%;
+    padding: 20px 0;
     text-align: center;
+    color: #ffffff;
 }
 
 .main-title {
@@ -15,7 +17,20 @@
 .name-part {
     display: inline-block;
     max-width: 100%;
+    font-family: 'Inter', Arial, sans-serif;
+    color: var(--highlander-orange);
+    font-size: 2.5rem;
+    line-height: 1.15;
     overflow-wrap: anywhere;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Inter', Arial, sans-serif;
 }
 
 .container,
