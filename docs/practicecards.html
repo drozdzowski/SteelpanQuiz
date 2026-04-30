@@ -62,30 +62,6 @@
         .card-text { font-size: 0.8rem; line-height: 1.4; margin: 3px 0; }
         .card-img { width: 100px; height: 100px; object-fit: cover; border-radius: 50%; margin-bottom: 8px; }
 
-        .selected-category {
-            width: min(92vw, 520px);
-            margin: -25px auto 10px;
-            color: var(--highlander-blue);
-            text-align: center;
-        }
-
-        .selected-category img {
-            width: 120px;
-            height: 120px;
-            object-fit: cover;
-            border-radius: 50%;
-            border: 4px solid var(--highlander-orange);
-            box-shadow: 0 8px 18px rgba(0, 0, 0, 0.18);
-        }
-
-        .selected-category-title {
-            margin: 10px 0 0;
-            font-family: 'Inter', Arial, sans-serif;
-            font-size: 1.4rem;
-            font-weight: 700;
-            color: var(--highlander-blue);
-        }
-
         /* Bullet list styling for card backs */
         .card-back ul {
             list-style: disc;
@@ -119,8 +95,6 @@
 <header class="site-header">
     <h1 class="main-title"><span class="name-part">Practice Flashcards</span></h1>
 </header>
-
-<div id="selectedCategory" class="selected-category" hidden></div>
 
 <div class="container" id="cardContainer">
 
@@ -1320,7 +1294,7 @@
                 <div class="card-title">Birth of the Steelpan</div>
                 <img src="images/pan-history-timeline.png" class="card-img" alt="">
                 <p class="card-text">Where did the steelpan begin?</p>
-                <p class="card-text">Think Trinidad, Carnival, and community invention.</p>
+                <p></p>
                 <small>Click to Reveal</small>
             </div>
             <div class="card-back">
@@ -1340,9 +1314,9 @@
         <div class="flashcard-inner">
             <div class="card-front">
                 <div class="card-title">African Drumming Roots</div>
-                <img src="images/tamboo bamboo.jpg" class="card-img" alt="">
+                <img src="images/djembe-drums.png" class="card-img" alt="">
                 <p class="card-text">1700s-1800s</p>
-                <p class="card-text">Percussion traditions survived oppression.</p>
+                <p></p>
                 <small>Click to Reveal</small>
             </div>
             <div class="card-back">
@@ -1364,7 +1338,7 @@
                 <div class="card-title">Tamboo Bamboo</div>
                 <img src="images/precursor-to-pan-tamboo.jpg" class="card-img" alt="">
                 <p class="card-text">1890s Carnival street music</p>
-                <p class="card-text">Bamboo voices before steel voices</p>
+                <p></p>
                 <small>Click to Reveal</small>
             </div>
             <div class="card-back">
@@ -1383,20 +1357,21 @@
     <div id="history-4" class="flashcard history" onclick="this.classList.toggle('flipped')">
         <div class="flashcard-inner">
             <div class="card-front">
-                <div class="card-title">Why Switch to Metal?</div>
-                <img src="images/tin-pan-to-taspo.jpg" class="card-img" alt="">
-                <p class="card-text">Bamboo splintered and broke.</p>
-                <p class="card-text">Players needed louder, sturdier sound.</p>
-                <small>Click to Reveal</small>
+                <div class="card-title">The Switch to Metal</div>
+                <img src="images/ogun1.png" class="card-img" alt="">
+                <p></p>
+                <p class="card-text">Louder, sturdier sound.</p>
+                 <p></p>
+                 <small>Click to Reveal</small>
             </div>
             <div class="card-back">
                 <div class="card-title">From Bamboo to Scrap Metal</div>
                 <ul>
-                    <li>Tamboo bamboo tubes broke after repeated pounding on the ground.</li>
+                    <li>Tamboo-bamboo tubes broke after repeated pounding on the ground.</li>
                     <li>In the 1930s, players began using metal household items.</li>
-                    <li>Early metal sounds came from soap boxes, biscuit tins, paint cans, and dustbins.</li>
-                    <li>Brake drums and other discarded items added louder resonance.</li>
-                    <li>These experiments led toward the modern steelpan.</li>
+                    <li>Early metal sounds came from soap boxes, biscuit tins, paint cans, and dustbin lids.</li>
+                    <li>Old vehicle brake drums and other discarded metal items added louder resonance.</li>
+                    <li>These experiments produced the modern steelpan's "engine room".</li>
                 </ul>
             </div>
         </div>
@@ -1407,9 +1382,9 @@
             <div class="card-front">
                 <div class="card-title">Metal Bands</div>
                 <img src="images/hell-yard-steelband.jpg" class="card-img" alt="">
+                <p></p>
                 <p class="card-text">1930s-1940s</p>
-                <p class="card-text">The sound got brighter and stronger.</p>
-                <small>Click to Reveal</small>
+                <p></p><small>Click to Reveal</small>
             </div>
             <div class="card-back">
                 <div class="card-title">The Loud New Carnival Sound</div>
@@ -1427,10 +1402,11 @@
     <div id="history-6" class="flashcard history" onclick="this.classList.toggle('flipped')">
         <div class="flashcard-inner">
             <div class="card-front">
-                <div class="card-title">Ellie Mannette</div>
+                <div class="card-title">Dr. Ellie Mannette</div>
                 <img src="images/ellie-mannette.png" class="card-img" alt="">
-                <p class="card-text">Experimented with tuning oil drums</p>
+                <p></p>
                 <p class="card-text">A key modern steelpan innovator</p>
+                <p></p>
                 <small>Click to Reveal</small>
             </div>
             <div class="card-back">
@@ -1451,8 +1427,9 @@
             <div class="card-front">
                 <div class="card-title">Organized Steelbands</div>
                 <img src="images/starlight-syncopators-uss-astoria-1957.jpg" class="card-img" alt="">
+                <p></p>
                 <p class="card-text">1940s-1950s</p>
-                <p class="card-text">Scales, melody, harmony, and bands</p>
+                <p></p>
                 <small>Click to Reveal</small>
             </div>
             <div class="card-back">
@@ -1473,8 +1450,9 @@
             <div class="card-front">
                 <div class="card-title">Beyond Carnival</div>
                 <img src="images/music-festival-finals.jpg" class="card-img" alt="">
-                <p class="card-text">1950s onward</p>
-                <p class="card-text">Pan entered concert halls and festivals.</p>
+                <p></p>
+                <p class="card-text">Pan embraces the classics.</p>
+                <p></p>
                 <small>Click to Reveal</small>
             </div>
             <div class="card-back">
@@ -1495,18 +1473,19 @@
             <div class="card-front">
                 <div class="card-title">National Instrument</div>
                 <img src="images/national-instrument.jpg" class="card-img" alt="">
-                <p class="card-text">Declared in 1992</p>
-                <p class="card-text">By Prime Minister Patrick Manning</p>
+                <p></p>
+                <p class="card-text">A long journey to official recognition</p>
+                <p></p>
                 <small>Click to Reveal</small>
             </div>
             <div class="card-back">
                 <div class="card-title">Official Recognition</div>
                 <ul>
-                    <li>In 1992, steelpan was declared the official national instrument of Trinidad and Tobago.</li>
-                    <li>The declaration was made under Prime Minister Patrick Manning.</li>
-                    <li>This recognized pan as a major cultural achievement.</li>
-                    <li>It affirmed the instrument's local roots and national importance.</li>
+                    <li>In 1992, then-Prime Minister Patrick Manning <b>recognised</b> the steelpan the official national instrument of Trinidad and Tobago.</li>
+                    <li>This recognized pan as a major cultural achievement, affirming the instrument's local roots and national importance.</li>
                     <li>Pan became a symbol of Trinidad and Tobago's creative identity.</li>
+                    <li>On 3 July 2024, the steelpan was <b>formally declared</b> as the National Musical Instrument of Trinidad and Tobago.</li>
+                   
                 </ul>
             </div>
         </div>
@@ -1517,8 +1496,9 @@
             <div class="card-front">
                 <div class="card-title">World Steelpan Day</div>
                 <img src="images/wsdlaunch.jpg" class="card-img" alt="">
-                <p class="card-text">August 11</p>
-                <p class="card-text">Proclaimed by the UN in 2023</p>
+                <p></p>
+                <p class="card-text">Officially on the United Nations' calendar</p>
+                <p></p>
                 <small>Click to Reveal</small>
             </div>
             <div class="card-back">
@@ -1534,13 +1514,37 @@
         </div>
     </div>
 
+    <div id="history-11" class="flashcard history" onclick="this.classList.toggle('flipped')">
+        <div class="flashcard-inner">
+            <div class="card-front">
+                <div class="card-title">Global Spread</div>
+                <img src="images/pan-on-the-move-wsd.jpg" class="card-img" alt="">
+                <p></p>
+                <p class="card-text">Migration carried steelpan culture worldwide</p>
+                 <p></p>
+                 <small>Click to Reveal</small>
+            </div>
+            <div class="card-back">
+                <div class="card-title">Pan Around the World</div>
+                <ul>
+                    <li>Steelpan spread internationally through Trinidadian migration.</li>
+                    <li>Carnival culture helped carry pan to new audiences.</li>
+                    <li>London's Notting Hill Carnival became an important stage.</li>
+                    <li>Competitions like Panorama helped showcase steelband excellence.</li>
+                    <li>Today pannists perform and study pan across the world.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
     <div id="history-12" class="flashcard history" onclick="this.classList.toggle('flipped')">
         <div class="flashcard-inner">
             <div class="card-front">
                 <div class="card-title">Nellie Bly</div>
-                <img src="images/steel_pan.jpg" class="card-img" alt="">
-                <p class="card-text">Journalist, traveler, industrial owner</p>
-                <p class="card-text">Connected to the 55-gallon drum story</p>
+                <img src="images/nellie-bly.png" class="card-img" alt="">
+                <p></p>
+                <p class="card-text">Produced that fateful oil drum</p>
+                <p></p>
                 <small>Click to Reveal</small>
             </div>
             <div class="card-back">
@@ -1548,8 +1552,7 @@
                 <ul>
                     <li>Elizabeth J. Cochran Seaman was better known as Nellie Bly.</li>
                     <li>She was a famous journalist and world traveler.</li>
-                    <li>Her Iron Clad Manufacturing Company made practical steel drums.</li>
-                    <li>Her company helped solve problems in oil storage and shipping.</li>
+                    <li>Her Iron Clad Manufacturing Company made practical steel barrels that helped solve problems in oil storage and shipping.</li>
                     <li>Those industrial drums later became central to steelpan history.</li>
                 </ul>
             </div>
@@ -1560,10 +1563,11 @@
         <div class="flashcard-inner">
             <div class="card-front">
                 <div class="card-title">The Bayonne Barrel Problem</div>
-                <img src="images/chromed-steel-pan.jpg" class="card-img" alt="">
-                <p class="card-text">Oil shipping needed a better container.</p>
-                <p class="card-text">Wooden barrels leaked and were heavy.</p>
-                <small>Click to Reveal</small>
+                <img src="images/making-barrels.png" class="card-img" alt="">
+                <p></p>
+                <p class="card-text">Fixing the leakage issue.</p>
+                 <p></p>
+                 <small>Click to Reveal</small>
             </div>
             <div class="card-back">
                 <div class="card-title">Why Steel Drums Mattered</div>
@@ -1571,7 +1575,7 @@
                     <li>By 1900, oil production was expanding rapidly around the world.</li>
                     <li>Wooden oil barrels were heavy and not fully leakproof.</li>
                     <li>Oil companies needed durable, manageable, leak-resistant containers.</li>
-                    <li>Standard Oil introduced a steel 42-gallon drum in 1902.</li>
+                    <li>Standard Oil introduced a steel 42-gallon drum in 1902, but it was flawed.</li>
                     <li>The later 55-gallon steel drum became the pan-maker's raw material.</li>
                 </ul>
             </div>
@@ -1582,9 +1586,10 @@
         <div class="flashcard-inner">
             <div class="card-front">
                 <div class="card-title">Henry Wehrhahn</div>
-                <img src="images/convexpan.png" class="card-img" alt="">
+                <img src="images/barrel-maker.png" class="card-img" alt="">
+                <p></p>
                 <p class="card-text">Machinist and superintendent</p>
-                <p class="card-text">Patented key steel barrel designs</p>
+                <p></p>
                 <small>Click to Reveal</small>
             </div>
             <div class="card-back">
@@ -1605,8 +1610,9 @@
             <div class="card-front">
                 <div class="card-title">Why Trinidad?</div>
                 <img src="images/nat-instrument2.jpg" class="card-img" alt="">
-                <p class="card-text">Oil, ports, Carnival, and invention met.</p>
-                <p class="card-text">The setting mattered.</p>
+                <p></p>
+                <p class="card-text">A happy accident.</p>
+                <p></p>
                 <small>Click to Reveal</small>
             </div>
             <div class="card-back">
@@ -1625,10 +1631,11 @@
     <div id="history-16" class="flashcard history" onclick="this.classList.toggle('flipped')">
         <div class="flashcard-inner">
             <div class="card-front">
-                <div class="card-title">Making a Pan from a Drum</div>
-                <img src="images/pan-higher-note2017.jpg" class="card-img" alt="">
-                <p class="card-text">Cut, indent, temper, tune.</p>
+                <div class="card-title">From Oil Drum to Steelpan</div>
+                <img src="images/making-a-pan.png" class="card-img" alt="">
+                <p></p>
                 <p class="card-text">Industrial steel became musical steel.</p>
+                <p></p>
                 <small>Click to Reveal</small>
             </div>
             <div class="card-back">
@@ -1649,8 +1656,9 @@
             <div class="card-front">
                 <div class="card-title">World War II Trinidad</div>
                 <img src="images/Armed Forces sub.png" class="card-img" alt="">
-                <p class="card-text">Trinidad's oil became strategically important.</p>
-                <p class="card-text">The country became "Naval Base Trinidad."</p>
+                <p></p>
+                <p class="card-text">"Naval Base Trinidad"</p>
+                <p></p>
                 <small>Click to Reveal</small>
             </div>
             <div class="card-back">
@@ -1671,8 +1679,9 @@
             <div class="card-front">
                 <div class="card-title">Carnival Ban</div>
                 <img src="images/steelband-clash.jpg" class="card-img" alt="">
-                <p class="card-text">Carnival was banned during wartime.</p>
-                <p class="card-text">Steelbands hit the road in 1947.</p>
+                <p></p>
+                <p class="card-text">1939-1945.</p>
+                <p></p>
                 <small>Click to Reveal</small>
             </div>
             <div class="card-back">
@@ -1693,18 +1702,19 @@
             <div class="card-front">
                 <div class="card-title">TASPO</div>
                 <img src="images/taspo1.jpg" class="card-img" alt="">
+                <p></p>
                 <p class="card-text">Trinidad All-Steel Pan Percussion Orchestra</p>
-                <p class="card-text">Festival of Britain, 1951</p>
-                <small>Click to Reveal</small>
+                  <p></p>
+                  <small>Click to Reveal</small>
             </div>
             <div class="card-back">
                 <div class="card-title">A Historic Steelband</div>
                 <ul>
-                    <li>TASPO formed to attend the Festival of Britain in 1951.</li>
-                    <li>Its full name was Trinidad All-Steel Pan Percussion Orchestra.</li>
-                    <li>It was the first steelband whose instruments were all made from oil drums.</li>
-                    <li>TASPO helped present Trinidad's pan innovation internationally.</li>
-                    <li>Its journey marked a major step in pan's global recognition.</li>
+                    <li>Trinidad All-Steel Pan Percussion Orchestra was formed to attend the Festival of Britain in 1951.</li>
+                    <li>Its members came from various steelbands who often clashed in the streets.</li>
+                    <li>TASPO was the first steelband whose instruments were all made from oil drums.</li>
+                    <li>TASPO helped present Trinidad's pan innovation internationally, marking a major step in pan's global recognition.</li>
+                    <li></li>
                 </ul>
             </div>
         </div>
@@ -1713,14 +1723,15 @@
     <div id="history-20" class="flashcard history" onclick="this.classList.toggle('flipped')">
         <div class="flashcard-inner">
             <div class="card-front">
-                <div class="card-title">55-Gallon Drum Facts</div>
-                <img src="images/mallets.png" class="card-img" alt="">
-                <p class="card-text">About 35 inches tall</p>
-                <p class="card-text">About 23 inches in diameter</p>
+                <div class="card-title">The Pan-Maker's Raw Material</div>
+                <img src="images/oil-drum.png" class="card-img" alt="">
+                <p></p>
+                <p class="card-text">That fateful oil drum</p>
+                <p></p>
                 <small>Click to Reveal</small>
             </div>
             <div class="card-back">
-                <div class="card-title">The Pan-Maker's Raw Material</div>
+                <div class="card-title">55-Gallon Drum Facts</div>
                 <ul>
                     <li>A standard 55-gallon drum is about 35 inches tall.</li>
                     <li>Its diameter is about 23 inches.</li>
@@ -2295,75 +2306,9 @@
 </div>
 
 <script>
-    const categoryDetails = {
-        history: {
-            label: 'Steelpan History',
-            image: 'images/category-thumbs/pan-history.jpg',
-            alt: 'Pan History'
-        },
-        thrust: {
-            label: 'WSTTT',
-            image: 'images/category-thumbs/wstttlogo.jpg',
-            alt: 'The World Steelpan Thrust'
-        },
-        highlanders: {
-            label: 'Highlanders Steel Orchestra',
-            image: 'images/category-thumbs/highlanders-steel-orchestra.jpg',
-            alt: 'Highlanders Steel Orchestra'
-        },
-        music: {
-            label: 'Music for the Pan',
-            image: 'images/category-thumbs/music-for-the-pan.jpg',
-            alt: 'Music for the Pan'
-        },
-        panyards: {
-            label: 'Panyards and Bands',
-            image: 'images/category-thumbs/panyards-and-bands.png',
-            alt: 'Panyards and Bands'
-        },
-        tuning: {
-            label: 'Pan Tuning',
-            image: 'images/category-thumbs/pan-tuning.png',
-            alt: 'Pan Tuning'
-        },
-        innovations: {
-            label: 'Innovations/Innovators',
-            image: 'images/category-thumbs/innovations-innovators.jpg',
-            alt: 'Innovations/Innovators'
-        },
-        competitions: {
-            label: 'Steelpan Competitions',
-            image: 'images/category-thumbs/steelpan-competitions.jpg',
-            alt: 'Steelpan Competitions'
-        },
-        women: {
-            label: 'Women in Pan',
-            image: 'images/category-thumbs/girlpat-retouched.png',
-            alt: 'Girl Pat Steel Orchestra'
-        }
-    };
-
-    function renderSelectedCategory(hash) {
-        const selectedCategory = document.getElementById('selectedCategory');
-        const details = categoryDetails[hash];
-
-        if (!details) {
-            selectedCategory.hidden = true;
-            selectedCategory.innerHTML = '';
-            return;
-        }
-
-        selectedCategory.innerHTML = `
-            <img src="${details.image}" alt="${details.alt}">
-            <div class="selected-category-title">${details.label}</div>
-        `;
-        selectedCategory.hidden = false;
-    }
-
     function filterCards() {
         const hash = window.location.hash.substring(1);
         const cards = document.querySelectorAll('.flashcard');
-        renderSelectedCategory(hash);
 
         let found = false;
         cards.forEach(card => {
