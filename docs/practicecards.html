@@ -62,6 +62,30 @@
         .card-text { font-size: 0.8rem; line-height: 1.4; margin: 3px 0; }
         .card-img { width: 100px; height: 100px; object-fit: cover; border-radius: 50%; margin-bottom: 8px; }
 
+        .selected-category {
+            width: min(92vw, 520px);
+            margin: -25px auto 10px;
+            color: var(--highlander-blue);
+            text-align: center;
+        }
+
+        .selected-category img {
+            width: 120px;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 4px solid var(--highlander-orange);
+            box-shadow: 0 8px 18px rgba(0, 0, 0, 0.18);
+        }
+
+        .selected-category-title {
+            margin: 10px 0 0;
+            font-family: 'Inter', Arial, sans-serif;
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--highlander-blue);
+        }
+
         /* Bullet list styling for card backs */
         .card-back ul {
             list-style: disc;
@@ -95,6 +119,8 @@
 <header class="site-header">
     <h1 class="main-title"><span class="name-part">Practice Flashcards</span></h1>
 </header>
+
+<div id="selectedCategory" class="selected-category" hidden></div>
 
 <div class="container" id="cardContainer">
 
@@ -1508,28 +1534,6 @@
         </div>
     </div>
 
-    <div id="history-11" class="flashcard history" onclick="this.classList.toggle('flipped')">
-        <div class="flashcard-inner">
-            <div class="card-front">
-                <div class="card-title">Global Spread</div>
-                <img src="images/pan-on-the-move-wsd.jpg" class="card-img" alt="">
-                <p class="card-text">Migration carried pan outward.</p>
-                <p class="card-text">Carnival culture helped it travel.</p>
-                <small>Click to Reveal</small>
-            </div>
-            <div class="card-back">
-                <div class="card-title">Pan Around the World</div>
-                <ul>
-                    <li>Steelpan spread internationally through Trinidadian migration.</li>
-                    <li>Carnival culture helped carry pan to new audiences.</li>
-                    <li>London's Notting Hill Carnival became an important stage.</li>
-                    <li>Competitions like Panorama helped showcase steelband excellence.</li>
-                    <li>Today pannists perform and study pan across the world.</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-
     <div id="history-12" class="flashcard history" onclick="this.classList.toggle('flipped')">
         <div class="flashcard-inner">
             <div class="card-front">
@@ -2291,9 +2295,75 @@
 </div>
 
 <script>
+    const categoryDetails = {
+        history: {
+            label: 'Steelpan History',
+            image: 'images/category-thumbs/pan-history.jpg',
+            alt: 'Pan History'
+        },
+        thrust: {
+            label: 'WSTTT',
+            image: 'images/category-thumbs/wstttlogo.jpg',
+            alt: 'The World Steelpan Thrust'
+        },
+        highlanders: {
+            label: 'Highlanders Steel Orchestra',
+            image: 'images/category-thumbs/highlanders-steel-orchestra.jpg',
+            alt: 'Highlanders Steel Orchestra'
+        },
+        music: {
+            label: 'Music for the Pan',
+            image: 'images/category-thumbs/music-for-the-pan.jpg',
+            alt: 'Music for the Pan'
+        },
+        panyards: {
+            label: 'Panyards and Bands',
+            image: 'images/category-thumbs/panyards-and-bands.png',
+            alt: 'Panyards and Bands'
+        },
+        tuning: {
+            label: 'Pan Tuning',
+            image: 'images/category-thumbs/pan-tuning.png',
+            alt: 'Pan Tuning'
+        },
+        innovations: {
+            label: 'Innovations/Innovators',
+            image: 'images/category-thumbs/innovations-innovators.jpg',
+            alt: 'Innovations/Innovators'
+        },
+        competitions: {
+            label: 'Steelpan Competitions',
+            image: 'images/category-thumbs/steelpan-competitions.jpg',
+            alt: 'Steelpan Competitions'
+        },
+        women: {
+            label: 'Women in Pan',
+            image: 'images/category-thumbs/girlpat-retouched.png',
+            alt: 'Girl Pat Steel Orchestra'
+        }
+    };
+
+    function renderSelectedCategory(hash) {
+        const selectedCategory = document.getElementById('selectedCategory');
+        const details = categoryDetails[hash];
+
+        if (!details) {
+            selectedCategory.hidden = true;
+            selectedCategory.innerHTML = '';
+            return;
+        }
+
+        selectedCategory.innerHTML = `
+            <img src="${details.image}" alt="${details.alt}">
+            <div class="selected-category-title">${details.label}</div>
+        `;
+        selectedCategory.hidden = false;
+    }
+
     function filterCards() {
         const hash = window.location.hash.substring(1);
         const cards = document.querySelectorAll('.flashcard');
+        renderSelectedCategory(hash);
 
         let found = false;
         cards.forEach(card => {
