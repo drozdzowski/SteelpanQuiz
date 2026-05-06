@@ -21,7 +21,20 @@
         h2 { color: var(--highlander-blue); margin-top: 30px; }
         h3 { color: var(--highlander-blue); font-size: 1.1rem; }
         .hero-img { width: 100%; height: auto; border-radius: 10px; margin: 20px 0; border: 1px solid #ddd; }
-        .hero-img-inline { width: 15%; height: auto; border-radius: 10px; margin: 0 15px 0 15px; border: 1px solid #ddd; display: inline-block; vertical-align: middle; }
+        .pan-sticks-img { width: 68%; max-width: 520px; display: block; margin: 16px auto 18px; }
+        .pan-shape-text { overflow: auto; }
+        .pan-shape-img { width: 150px; height: 150px; object-fit: contain; border-radius: 10px; margin: 6px 20px 12px 0; border: 1px solid #ddd; float: left; }
+        .pan-shape-img.right { margin: 6px 0 12px 20px; float: right; }
+        @media (max-width: 520px) {
+            .pan-shape-img,
+            .pan-shape-img.right {
+                width: 130px;
+                height: 130px;
+                float: none;
+                display: block;
+                margin: 0 auto 14px;
+            }
+        }
         
         .external-links { background: #f0f4f8; padding: 20px; border-radius: 8px; margin: 30px 0; }
         .external-links h3 { margin-top: 0; }
@@ -79,9 +92,10 @@
         <li><strong>Durability:</strong> The drums must withstand significant hammering, heat treatment, and tension from the tuned notes, which the sturdy 18-gauge steel provides.</li>
     </ol>
 
-    <p>Initially, players pounded their pans from the inside out, creating a <strong>CONVEX</strong> shape: <img src="images/convexpan.png" alt="Convex Pan Shape" class="hero-img-inline"></p>
+    <h2>Convex vs Concave</h2>
+    <p class="pan-shape-text"><img src="images/convexpan.png" alt="Convex Pan Shape" class="pan-shape-img">Initially, players pounded their pans from the inside out, creating a <strong>CONVEX</strong> shape.</p>
 
-    <p><strong>Ellie Mannette</strong> was the first to pound the metal from the outside in, creating the <strong>CONCAVE</strong> steelpan shape that we know today. This concave design allowed for more notes to be placed on the playing surface, and produced better sound isolation between notes. <img src="images/tenorpan.png" alt="Tenor Pan" class="hero-img-inline"></p>
+    <p class="pan-shape-text"><img src="images/tenorpan.png" alt="Tenor Pan" class="pan-shape-img right"><strong>Ellie Mannette</strong> was the first to pound the metal from the outside in, creating the <strong>CONCAVE</strong> steelpan shape that we know today. This concave design allowed for more notes to be placed on the playing surface, and produced better sound isolation between notes.</p>
 
     <p>Mannette and his <strong>Invaders</strong> Steelband debuted these new-style pans in <strong>1947</strong> during the second Carnival after WW2 ended.</p>
 
@@ -108,11 +122,11 @@
 
     <h2>Tools Required</h2>
     <ul>
-        <li><strong>Tools required for cutting the drum:</strong> an electric jigsaw or old cutlass and hammer</li>
-        <li><strong>Tools required for sinking the drum:</strong> gloves, a marker, a compass, a 2.5 to 3kg hammer and earmuffs.</li>
-        <li><strong>Tools required for marking the notes:</strong> flexible ruler and pen/marker.</li>
-        <li><strong>Tools required for tuning:</strong> A large tuning hammer, a plastic tuning hammer, a pan mallet, a good musical ear and an electronic tuning device.</li>
-        <li><strong>Tools required for Backing and Grooving:</strong> Metal Punch, backing sledgehammer, and a smoothing hammer with a plastic head.</li>
+        <li><strong>For cutting the drum:</strong> an electric jigsaw or old cutlass and hammer</li>
+        <li><strong>For sinking the drum:</strong> gloves, a marker, a compass, a 2.5 to 3kg hammer and earmuffs.</li>
+        <li><strong>For marking the notes:</strong> flexible ruler and pen/marker.</li>
+        <li><strong>For tuning:</strong> A large tuning hammer, a plastic tuning hammer, a pan mallet, a good musical ear and an electronic tuning device.</li>
+        <li><strong>For backing and grooving:</strong> Metal Punch, backing sledgehammer, and a smoothing hammer with a plastic head.</li>
     </ul>
 
     
@@ -134,9 +148,9 @@
     <p><strong>BUT</strong> not everyone follows it strictly. Many European orchestras, particularly in Germany and Austria, tune slightly higher — often to A442 or A443 — because it produces a brighter, more penetrating sound in large concert halls. Some period-instrument ensembles deliberately tune to historical standards like A415 for authentic Baroque performance.</p>
     <p>For steelpans specifically, tuning to A440 is the modern standard, though early pan tuners worked by ear before standardization reached the instrument.</p>
 
-    <h2>Steelpan Mallets (Pan Sticks)</h2>
-    <img src="images/mallets.png" alt="Range of Steelpan Mallets" class="hero-img">
-<p>Steelpan mallets are made from 12mm diameter wooden dowels cut to a specific length. A latex rubber tubing is placed at one end of each mallet. For the bass steelpans, sponge balls are used. This is the end that strikes the notes when playing the pan.</p>
+    <h2>Steelpan Sticks</h2>
+    <img src="images/pansticks.png" alt="Range of Steelpan Sticks" class="hero-img pan-sticks-img">
+<p>Pan sticks are made from 12mm diameter wooden dowels cut to a specific length. A latex rubber tubing is placed at one end of each stick. This is the end that strikes the notes when playing the pan. For the bass steelpans, sponge balls are used instead of rubber tubing. </p>
 
     <div class="external-links">
         <h3>Further Reading</h3>

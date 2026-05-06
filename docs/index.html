@@ -49,12 +49,30 @@ max-width: 100%;
 padding: 0 12px 28px;
 }
 
+.site-header.home-header {
+padding: clamp(10px, 2vw, 16px) 0 clamp(14px, 2.5vw, 22px);
+}
+
+.site-header .main-title {
+margin: 0 auto;
+line-height: 0;
+}
+
+.quiz-logo {
+display: block;
+width: min(70vw, 440px);
+max-height: 108px;
+height: auto;
+object-fit: contain;
+margin: 0 auto;
+}
+
 .intro {
 width: min(100%, 760px);
-margin: 18px auto 20px;
+margin: 12px auto 16px;
 font-family: 'Open Sans', Arial, sans-serif;
 font-size: clamp(13px, 2.8vw, 17px);
-line-height: 1.4;
+line-height: 1.35;
 text-align: center;
 }
 
@@ -62,14 +80,15 @@ text-align: center;
 display: flex;
 flex-direction: column;
 align-items: center;
-width: min(100%, 560px);
+width: min(100%, 450px);
+margin-top: clamp(12px, 2.5vw, 22px);
 }
 
 .pan-base {
 box-sizing: content-box;
 position: relative;
-width: min(496px, calc(100vw - 56px));
-width: min(496px, calc(100dvw - 56px));
+width: min(390px, 40dvh, calc(100vw - 56px));
+width: min(390px, 40dvh, calc(100dvw - 56px));
 aspect-ratio: 1;
 border-radius: 50%;
 border: clamp(8px, 3vw, 15px) solid var(--rim-color);
@@ -132,16 +151,16 @@ font-size: clamp(10px, 2.8vw, 14px);
 .sticks-area {
 display: flex;
 justify-content: space-between;
-width: min(480px, calc(100vw - 56px));
-width: min(480px, calc(100dvw - 56px));
-margin-top: clamp(-45px, -8vw, -24px);
+width: min(372px, 38dvh, calc(100vw - 56px));
+width: min(372px, 38dvh, calc(100dvw - 56px));
+margin-top: clamp(-38px, -6vw, -22px);
 z-index: 20;
 }
 
 .stick {
 position: relative;
 width: 20px;
-height: 208px;
+height: clamp(124px, 17dvh, 160px);
 border-radius: 10px;
 display: flex;
 justify-content: center;
@@ -151,7 +170,7 @@ transition: .3s cubic-bezier(.175,.885,.32,1.275);
 }
 
 .stick::before {
-content: ''; position: absolute; top: -5px; width: 30px; height: 50px;
+content: ''; position: absolute; top: -5px; width: 30px; height: clamp(38px, 5.6dvh, 48px);
 background: linear-gradient(135deg, #ce1126 0%, #ce1126 35%, #ffffff 35%, #ffffff 42%, #000000 42%, #000000 58%, #ffffff 58%, #ffffff 65%, #ce1126 65%, #ce1126 100%);
 border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.4);
 }
@@ -176,6 +195,17 @@ border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.4);
 
 .stick-text { writing-mode: vertical-rl; font-weight: 900; color: white; font-size: 14px; }
 .stick-left .stick-text { transform: rotate(180deg); }
+
+@media (max-width: 650px) {
+.quiz-logo {
+width: min(86vw, 420px);
+max-height: 105px;
+}
+
+.main-stage {
+margin-top: 24px;
+}
+}
 </style>
     <link rel="stylesheet" href="assets/css/base.css">
     <link rel="stylesheet" href="assets/css/layout.css">
@@ -184,10 +214,9 @@ border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.4);
 
 <body>
 
-<header class="site-header">
+<header class="site-header home-header">
 <h1 class="main-title">
-<span class="name-part">Bertram "Bertie" Marshall O.R.T.T. National Steelpan Quiz and Spelling Bee Competition</span>
-</h1>
+ <img src="images/website-quiz-logo.jpeg" alt="New quiz logo" class="quiz-logo"></h1>
 </header>
 
 <div class="main-stage">
@@ -210,7 +239,7 @@ border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.4);
 
 <div class="intro">
 <p>
-Launched in 2024 by the World Steelpan Thrust of Trinidad and Tobago and the Highlanders Steel Orchestra in honour of Highlanders Steel Orchestra's legendary leader and Master Pan Tuner.
+Launched in 2024 by the World Steelpan Thrust of Trinidad and Tobago and the Highlanders Steel Orchestra in honour of Highlanders Steel Orchestra's legendary leader and master pan-tuner, Bertram "Bertie" Marshall, O.R.T.T.
 </p>
 </div>
 
