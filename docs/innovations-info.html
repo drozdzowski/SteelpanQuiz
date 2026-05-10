@@ -18,7 +18,23 @@
         .content-container { max-width: 800px; margin: 40px auto; padding: 40px; background: white; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
         
         h1 { color: var(--highlander-blue); border-bottom: 3px solid var(--highlander-orange); padding-bottom: 10px; }
-        .hero-img { width: 50%; height: auto; border-radius: 10px; margin: 20px 0; border: 1px solid #ddd; }
+        h1, h2, h3, .external-links, .cta-box { clear: both; }
+        .hero-img {
+            width: min(30%, 210px);
+            height: auto;
+            float: left;
+            border-radius: 10px;
+            margin: 6px 20px 12px 0;
+            border: 1px solid #ddd;
+        }
+        @media (max-width: 600px) {
+            .hero-img {
+                width: min(72%, 260px);
+                float: none;
+                display: block;
+                margin: 14px auto;
+            }
+        }
         
         .external-links { background: #f0f4f8; padding: 20px; border-radius: 8px; margin: 30px 0; }
         .external-links a { color: var(--highlander-blue); font-weight: bold; text-decoration: none; display: block; margin-bottom: 10px; }
@@ -86,28 +102,29 @@ From Spree Simon’s melody pan in 1945 to virtual panyards in 2025, steelpan in
 
 <h1>THE INNOVATORS</h1>
 
- <h1>Bertram "Bertie" Marshall</h1> <!-- Change for each page -->
+ <h1>Bertram "Bertie" Marshall</h1> 
 
-    <p>This legendary Trinidadian pan tuner and innovator is often called the “tuner’s tuner” for his revolutionary contributions to the steelpan.  His work transformed the instrument from a basic percussive tool into a sophisticated musical instrument capable of complex harmonies.
+  <img src="images/bertie-marshall-with-pan.jpg" class="hero-img" alt="Bertram Marshall">
+<p>This legendary Trinidadian pan tuner and innovator is often called the “tuner’s tuner” for his revolutionary contributions to the steelpan.  His work transformed the instrument from a basic percussive tool into a sophisticated musical instrument capable of complex harmonies.
 <p>
-Key Innovations and Inventions: <p>
-Harmonic Tuning: In 1956, Marshall revolutionized the sound of the pan by introducing harmonic tuning.  By tuning notes by octaves and overtones, he gave the instrument its distinctive “bright” and complex tonal quality. He was the first to amplify the steelpan electronically, and helped develop the Double Tenor steelpan with Vincent Pompey.</p>
+<h3>Key Innovations and Inventions</h3><p>
+<b>Harmonic Tuning:</b> In 1956, Marshall revolutionized the sound of the pan by introducing harmonic tuning.  By tuning notes by octaves and overtones, he gave the instrument its distinctive “bright” and complex tonal quality. He was the first to amplify the steelpan electronically, and helped develop the Double Tenor steelpan with Vincent Pompey.</p>
 
 He acted as Captain, tuner, and arranger for the Laventille Highlanders Steel Orchestra for several decades until the 1970s, when the Desperadoes Steel Orchestra enticed him up to their lanyard as full-time tuner.</p>
-Marshall's arrangement of Handel's "Every Valley Shall Be Exalted" won the first "Bomb" competition in 1963, and was instrumental in bringing the steelpan into churches to accompany hymns.</p>
+Marshall's arrangement of <b>Handel's "Every Valley Shall Be Exalted"</b> won the first "Bomb" competition in 1963, and was instrumental in bringing the steelpan into churches to accompany hymns.</p>
 <p>
-Scientific Contribution: Participated in the first scientific studies of the steelpan at CARIRI, validating the production process. <p>
-Recognition: Awarded the Chaconia Medal (Gold) in 1972 and the Order of the Republic of Trinidad and Tobago in 2008. <p>
+<h3>Scientific Contribution:</h3> Participated in the first scientific studies of the steelpan at CARIRI, validating the production process. <p>
+<h3>Recognition:</h3> Awarded the Chaconia Medal (Gold) in 1972 and the Order of the Republic of Trinidad and Tobago in 2008. <p>
 
 Died in 2012 and was honored by his band at a gathering at his home on Erica Street in Laventille where the new Highlanders panyard now stands.</p>
 
     <!-- Insert the specific image for this category -->
-    <img src="images/bertie-marshall-with-pan.jpg" class="hero-img" alt="Bertram Marshall">
-
-
+    
             
 <h1>Anthony Williams</h1>
-<p>Anthony Williams was born in 1931 in Port of Spain and grew up in St. James. In the early 1940s, he began a lifelong involvement with the steelband movement. He played with Harlem Nightingale Steelband at age 12 for the first street Carnival after World War II and subsequently co-founded several bands including North Stars, the most successful band of its era, which he captained from the early 1950s. North Stars did several overseas tours and won many local competitions, including the first Steelband Panorama Competition in 1963. Williams was one of the players in the Trinidad All Steel Percussion Orchestra’s historic 1951 tour to Britain and parts of Europe.</p>
+<img src="images/prof-anthony-willams.jpg" class="hero-img" alt="Anthony Williams">
+<p>Anthony Williams was born in 1931 in Port of Spain and grew up in St. James. In the early 1940s, he began a lifelong involvement with the steelband movement. He played with Harlem Nightingale Steelband at age 12 for the first street Carnival after World War II and subsequently co-founded several bands including North Stars, the most successful band of its era, which he captained from the early 1950s. 
+<p>North Stars did several overseas tours and won many local competitions, including the first Steelband Panorama Competition in 1963. Williams was also one of the players in the Trinidad All Steel Percussion Orchestra’s (TASPO) historic 1951 tour to Britain and parts of Europe.</p>
 <h3>Key Innovations and Inventions</h3>
 <ul>
     <li>Created the Spider Web tenor pan in 1953, using a circular tuning pattern for more consistent, harmonic sound.</li>
@@ -118,14 +135,12 @@ Died in 2012 and was honored by his band at a gathering at his home on Erica Str
 </ul>
 <h3>Recognition</h3>
 <p>Awarded the Chaconia Medal (Gold) in 1992, the Order of the Republic of Trinidad and Tobago in 2008, and honorary doctorates from UWI and Northern Illinois University.</p>
-<img src="images/prof-anthony-willams.jpg" class="hero-img" alt="Anthony Williams">
+
 <div class="external-links">
-    <h3>Further Reading</h3>
-    <a href=" ">Link 1</a>
-    <a href=" ">Link 2</a>
-</div>
+ </div>
 
 <h1>Dr. Elliot “Ellie” Mannette (1927–2018)</h1>
+<img src="images/ellie-mannette.png" class="hero-img" alt="Dr. Ellie Mannette">
 <p>Born in Sans Souci, Trinidad, Mannette developed a passion for metal and tools for metalworking as a child and became engaged in the evolution of the phenomenon of sounding steel. He is known as the “father of the modern steelpan” for his remarkable innovations that created the instrument we know today.</p>
 <h3>Key Innovations and Inventions</h3>
 <ul>
@@ -139,14 +154,12 @@ Died in 2012 and was honored by his band at a gathering at his home on Erica Str
 <p>After helping build the US Navy Steelband, Mannette spent much time in the United States creating other steelbands and eventually migrated in 1967. In 1991, he was invited by West Virginia University to teach pan building and playing, leading to the University Tuning Project and Mannette Steel Drums.</p>
 <h3>Recognition</h3>
 <p>Hummingbird Medal (Silver) of Trinidad and Tobago (1969); 1999 National Heritage Fellowship from the US National Endowment for the Arts; Honorary Doctorate from the University of the West Indies (2000); Chaconia Medal Silver (2000); Hall of Fame of the Percussive Arts Society (2003); work showcased at the Smithsonian Institution.</p>
-<img src="images/ellie-mannette.png" class="hero-img" alt="Dr. Ellie Mannette">
+
 <div class="external-links">
-    <h3>Further Reading</h3>
-    <a href=" ">Link 1</a>
-    <a href=" ">Link 2</a>
-</div>
+ </div>
 
 <h1>Jim "James" Phillip</h1>
+<img src="images/jim-phillip.png" class="hero-img" alt="Jim Phillip">
 <p>Jim Phillip is a pan tuner, innovator, and educator from Chaguanas, Trinidad and Tobago. He has contributed to the development of the steelband movement through designs that improved the tuning of traditional and modern steelpans. He is best known for crafting traditional pan instruments to solve practical issues like weight and portability.</p>
 <h3>Key Innovations and Inventions</h3>
 <ul>
@@ -156,14 +169,11 @@ Died in 2012 and was honored by his band at a gathering at his home on Erica Str
 <p>Phillip is an educator and researcher in pan technology and development. He has worked with the University of Trinidad and Tobago, as well as international organizations and universities in the USA and Europe to develop curricula that promote pan education and technological research.</p>
 <h3>Recognition</h3>
 <p>Recipient of the Rudolph Charles Pan Innovation Award; recognized by UNESCO as a leader in pan innovation, pedagogy, and instrumentation.</p>
-<img src="images/jim-phillip.png" class="hero-img" alt="Jim Phillip">
 <div class="external-links">
-    <h3>Further Reading</h3>
-    <a href=" ">Link 1</a>
-    <a href=" ">Link 2</a>
-</div>
+ </div>
 
 <h2>Gerard (Gerald) Clarke</h2>
+<img src="images/gerald-clarke.png" class="hero-img" alt="Gerard Clarke">
 <p>Born in 1943 in San Fernando, Gerard (aka Gerald) Clarke is a highly regarded Trinidad-based steelpan tuner and maker known for his expertise in crafting finely tuned pans. He has worked with notable bands such as Desperadoes, Starlift, St. Joseph's Convent, and St. Mary's College. Recognized as a skilled technician in the pan fraternity, he is also a tuner and maker for the British Philharmonic Steel Orchestra, and has worked with educational institutions to promote pan education and research. He has been recognized for his longstanding work with StarLift when Pan Trinbago invited that group to join the Steelbands Association.</p>
 <h3>Key Innovations and Inventions</h3>
 <ul>
@@ -173,14 +183,11 @@ Died in 2012 and was honored by his band at a gathering at his home on Erica Str
 <p>Worked with educational institutions to promote pan education and research.</p>
 <h3>Recognition</h3>
 <p>Recognized for longstanding work with StarLift and other bands.</p>
-<img src="images/gerald-clarke.png" class="hero-img" alt="Gerard Clarke">
 <div class="external-links">
-    <h3>Further Reading</h3>
-    <a href=" ">Link 1</a>
-    <a href=" ">Link 2</a>
 </div>
 
 <h1>Augustus Peters</h1>
+<img src="images/augustus-peters.png" class="hero-img" alt="Augustus Peters">
 <p>Augustus “Gusy” Peters is a legendary double-tenor tuner and maker from Trinidad and Tobago, widely recognized as a premier tuner in the global steelpan industry. Known for his expert craftsmanship, he is the founder of Augustus Peters Steelpans (APS), a brand that provides professional tuning, crafting, and tuning services. Peters’ work is sought after internationally; he has traveled as far as Japan and Canada to tune and maintain instruments for major events like the Caribana Festival. His APS brand instruments have been featured on high-profile platforms, and in September 2014, Pan Trinbago officially acknowledged his outstanding contribution to the steelband movement, celebrating him as one of the best tuners in the world.</p>
 <h3>Key Innovations and Inventions</h3>
 <ul>
@@ -190,14 +197,12 @@ Died in 2012 and was honored by his band at a gathering at his home on Erica Str
 <p>Promotes pan education and technological research globally.</p>
 <h3>Recognition</h3>
 <p>Officially acknowledged by Pan Trinbago in 2014 as one of the best tuners in the world.</p>
-<img src="images/augustus-peters.png" class="hero-img" alt="Augustus Peters">
+
 <div class="external-links">
-    <h3>Further Reading</h3>
-    <a href=" ">Link 1</a>
-    <a href=" ">Link 2</a>
-</div>
+ </div>
 
 <h1>Professor Emeritus Brian Copeland</h1>
+<img src="images/prof-brian-copeland.png" class="hero-img" alt="Professor Brian Copeland">
 <p>Professor Emeritus Brian Copeland, Ph.D. was the Pro Vice-Chancellor and Campus Principal of UWI's St. Augustine campus from 2016-2022. He has also served as Professor in Electrical and Computer Engineering, Dean of the Faculty of Engineering, and Head of the Department of Electrical and Computer Engineering. His focus areas have been in Digital Electronics and Microprocessor Systems Design and Control Systems.</p>
 <h3>Key Innovations and Inventions</h3>
 <ul>
@@ -206,69 +211,6 @@ Died in 2012 and was honored by his band at a gathering at his home on Erica Str
 </ul>
 <h3>Recognition</h3>
 <p>First recipient of the Order of the Republic of Trinidad and Tobago (ORTT) in 2008; joint recipient of the Chaconia Medal Gold as a member of the G-Pan development team in 2007; Guardian Life Premium Teaching Award (2002); BP/AMOCO Fellowship Award for Senior Academic Staff at UWI (2001); LASPAU/Fulbright scholarship for Doctoral program at the University of Southern California, Los Angeles (1987).</p>
-<img src="images/prof-brian-copeland.png" class="hero-img" alt="Professor Brian Copeland">
-<div class="external-links">
-    <h3>Further Reading</h3>
-    <a href=" ">Link 1</a>
-    <a href=" ">Link 2</a>
-</div>
-
- <h1> </h1> <!-- Change for each page -->
-
-    <p>
-<p>
-Key Innovations and Inventions: <p>
-
-<p>
-Scientific Contribution:  <p>
-Recognition: </p>
-
-    <!-- Insert the specific image for this category -->
-    <img src="images/placeholder.png" class="hero-img" alt="Tuning a Pan">
-
-    <div class="external-links">
-        <h3>Further Reading</h3>
-        <a href=" "</a>
-        <a href=" "</a>
-    </div>
-
- <h1> </h1> <!-- Change for each page -->
-
-    <p>
-<p>
-Key Innovations and Inventions: <p>
-
-<p>
-Scientific Contribution:  <p>
-Recognition: </p>
-
-    <!-- Insert the specific image for this category -->
-    <img src="images/placeholder.png" class="hero-img" alt="Tuning a Pan">
-
-    <div class="external-links">
-        <h3>Further Reading</h3>
-        <a href=" "</a>
-        <a href=" "</a>
-    </div>
-
- <h1> </h1> <!-- Change for each page -->
-
-    <p>
-<p>
-Key Innovations and Inventions: <p>
-
-<p>
-Scientific Contribution:  <p>
-Recognition: </p>
-
-    <!-- Insert the specific image for this category -->
-    <img src="images/placeholder.png" class="hero-img" alt="Tuning a Pan">
-
-    <div class="external-links">
-        <h3>Further Reading</h3>
-        <a href=" "</a>
-        <a href=" "</a>
-    </div>Anthony Williams
 
     <div class="cta-box">
         <p>Think you've mastered this topic?</p>
