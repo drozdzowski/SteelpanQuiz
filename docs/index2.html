@@ -16,7 +16,7 @@ box-sizing: border-box;
 :root {
 --rim-color: #222;
 --cream-tip: #fffdd0;
---neon-blue: #00e5ff;
+--neon-blue: #00b8d4;
 --neon-pink: #ff007b;
 --highlander-blue: #002366;
 --highlander-orange: #f37021;
@@ -90,51 +90,21 @@ position: relative;
 width: min(390px, 40dvh, calc(100vw - 56px));
 width: min(390px, 40dvh, calc(100dvw - 56px));
 aspect-ratio: 1;
-border-radius: 50%;
 border: 0;
-box-shadow:
-0 46px 90px rgba(0,0,0,0.82),
-0 14px 28px rgba(0,229,255,0.12),
-inset 0 0 34px rgba(255,255,255,0.32),
-inset 0 -24px 44px rgba(0,0,0,0.55);
-overflow: hidden;
-background: #111;
+background: transparent;
 isolation: isolate;
 }
 
 .pan-wrap::before,
 .pan-wrap::after {
-content: "";
-position: absolute;
-inset: 0;
-border-radius: 50%;
-pointer-events: none;
-z-index: 2;
-}
-
-.pan-wrap::before {
-box-shadow:
-inset 0 0 0 clamp(7px, 1.9vw, 13px) rgba(42,47,51,0.9),
-inset 0 0 0 clamp(10px, 2.6vw, 18px) rgba(220,226,229,0.48),
-inset 18px 22px 36px rgba(255,255,255,0.35),
-inset -20px -26px 42px rgba(0,0,0,0.46);
-}
-
-.pan-wrap::after {
-background:
-radial-gradient(circle at 34% 24%, rgba(255,255,255,0.34), transparent 18%),
-radial-gradient(circle at 72% 82%, rgba(0,0,0,0.32), transparent 24%),
-linear-gradient(145deg, rgba(255,255,255,0.18), transparent 42%, rgba(0,0,0,0.28));
-mix-blend-mode: screen;
-opacity: 0.62;
+display: none;
 }
 
 .pan-img {
 display: block;
 width: 100%;
 height: 100%;
-object-fit: cover;
-transform: scale(1.08);
+object-fit: contain;
 filter: contrast(1.14) saturate(1.03) brightness(0.98);
 }
 
