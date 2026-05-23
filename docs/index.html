@@ -144,6 +144,20 @@ padding: 5px;
 transform: rotate(calc(var(--r)*-1));
 }
 
+.note-contact span,
+.note-sources span,
+.note-podcast span {
+white-space: nowrap;
+font-size: clamp(6px, 1.75vw, 9px);
+padding: 2px;
+}
+
+.note-play-yuhself span {
+white-space: nowrap;
+font-size: clamp(5px, 1.35vw, 7px);
+padding: 1px;
+}
+
 .note-practice span,
 .note-sponsors span {
 display: block;
@@ -172,6 +186,7 @@ padding: 3px;
 
 .note-center span {
 font-size: clamp(10px, 2.8vw, 14px);
+white-space: nowrap;
 }
 
 .sticks-area {
@@ -300,7 +315,11 @@ items.forEach((item, i) => {
     const labelClass = {
         'Sponsors': 'note-sponsors',
         'Previous Quizzes': 'note-previous-quizzes',
-        'Practice': 'note-practice'
+        'Practice': 'note-practice',
+        'Contact': 'note-contact',
+        'Sources': 'note-sources',
+        'Play Yuhself': 'note-play-yuhself',
+        'Podcast': 'note-podcast'
     }[item.name];
     if (labelClass) note.classList.add(labelClass);
     note.dataset.index = i;
